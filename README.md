@@ -1,4 +1,4 @@
 school-site
 ===========
 
-Web Development for Schools
+Web site Development for shs, jhs and primary Schools.
