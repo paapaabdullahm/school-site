@@ -4,14 +4,12 @@ if (!empty($host)) {
 echo "<!doctype html>
 <html lang=\"en\">
 <head><title>".strtoupper($host)."</title>"; 
-	echo "
-	<script src=\"js/jquery-1.11.0.min.js\"></script>
-	<script src=\"js/jcarousellite_1.0.1c4.js\" type=\"text/javascript\"></script>
-	";
+	
 	require_once ("fonts/raleway/raleway.dcss.php");
 	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"fonts/fontawesome/css/font-awesome.css\">";
 	echo "<link rel=\"stylesheet\" type=\"text/css\" class=\"ui\" href=\"layouts/semantic/css/semantic.css\">";
 	require_once ("css/main.dcss.php"); 
+	
 	echo "
 </head>
 <body>
@@ -491,11 +489,10 @@ echo "<!doctype html>
 	
 	</center>
 	
-	
+	<script src=\"js/jquery-1.11.0.min.js\"></script>
+	<script src=\"js/jcarousellite_1.0.1c4.js\" type=\"text/javascript\"></script>
 	<script src=\"js/smooth-scroll.js\"></script>
-	
 	<script src=\"layouts/semantic/javascript/semantic.js\"></script>
-	
 	<script type=\"text/javascript\"> smoothScroll.init(); </script>
 	
 	<script type=\"text/javascript\"> 
