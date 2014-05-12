@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(http://sekco.local/public/fonts/raleway/Raleway-Thin.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(http://sekco.local/public/fonts/raleway/Raleway-ExtraLight.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(http://sekco.local/public/fonts/raleway/Raleway-Light.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(http://sekco.local/public/fonts/raleway/Raleway.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(http://sekco.local/public/fonts/raleway/Raleway-Medium.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(http://sekco.local/public/fonts/raleway/Raleway-SemiBold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(http://sekco.local/public/fonts/raleway/Raleway-Bold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(http://sekco.local/public/fonts/raleway/Raleway-ExtraBold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Raleway Heavy'), local('Raleway-Heavy'), url(http://sekco.local/public/fonts/raleway/Raleway-Heavy.ttf) format('ttf');
+}
+		

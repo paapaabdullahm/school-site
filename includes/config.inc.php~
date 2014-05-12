@@ -21,6 +21,7 @@ switch ($sch_name_short)
 	case 'sekco':{
 		/*school details
 		*/
+		
 		$school_gender = "mixed";
 		$slogan = "yensuro";
 		$motto = "lux et veritas";
@@ -40,8 +41,8 @@ switch ($sch_name_short)
 		/*site colours and images
 		*/
 		$color = "#25b8ef";
-		$background_image = "url(img/".$host."_bg.jpg)";
-		$img_sprite_file = "url('img/".$sch_name_short."_sprite.png')";
+		$background_image = "url('../img/".$host."_bg.jpg')";
+		$img_sprite_file = "url('../img/".$sch_name_short."_sprite.png')";
 		
 		/*recent additions
 		*/

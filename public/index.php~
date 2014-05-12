@@ -43,7 +43,7 @@ echo "<!doctype html>
 	
 	echo "<div class='Background'></div>";
 	
-	if ( $condition == false ) 
+	if ( $condition != false ) 
 	{
 	echo "
 	<center>

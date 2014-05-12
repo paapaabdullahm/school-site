@@ -1,12 +1,34 @@
-<?php
-echo "
-<style type='text/css'>
+<?php 
+	switch ( $host ) 
+	{
+	case 'fijai-shs.local': { 
+	$color = "#965292"; 
+	}break;
+	
+	case 'sekco.local': { 
+	$color = "#25b8ef"; 
+	$background_color = "rgba(61,0,100,0)"; 
+	}break;
+	
+	case 'knust-jhs.local': { 
+	$color = "#388f5f"; 
+	}break;
+	
+	}
+	$recent_additions_thumbnail_path = "sections/left/secondary/thumbnails";
+	$background_image = "url('../img/".$sch_name_short."_bg.jpg')";
+	$img_sprite_file  = "url('../img/".$sch_name_short."_sprite.png')";
+	$isometric_grid   = "url('../img/".$sch_name_short."_isometric_grid.png')";
+	$css_main_file_path = "css/".$sch_name_short."_main.css";
+	
+	$output = "
 	/*
-	**************** CSS RESET *******************
+	**************** CSS RESET ***********************************
 	*/
 	html,body{
-		padding:0; margin-top:0;
+		padding:0; margin:0;
 		font-family: serif, sans-serif, verdana; font-weight: 400;
+		background-color: {$background_color};
 	}
 	a, a:hover, a:active {
 		text-decoration: none;
@@ -14,13 +36,13 @@ echo "
 		color: #555; 
 	}
 	/*
-	**************** CSS SPRITE 5PX SPACING TO THE RIGHT*******************
+	**************** CSS SPRITE 5PX SPACING TO THE RIGHT**********
 	*/
 	.sprite { 
-		background: {$img_sprite_file} no-repeat top left;  
+		background: {$img_sprite_file}; no-repeat top left;  
 	}
 	/*
-	**************** SPACER, BORDERS, HEIGHT(up to 5em @ 0.2 precision), COLOURED BG *******************
+	**************** SPACER, BORDERS, HEIGHT(up to 5em @ 0.2 precision), COLOURED BG ************
 	*/
 	.spacer { 
 		min-width: 179px; width: 179px;
@@ -67,12 +89,12 @@ echo "
 	.thick-yellow-bordered {border: 3px solid yellow;}
 	
 	.sch-coloured { 
-		background: rgba(72,158,231,0.8);
+		background: rgb(107,176,235);
 		min-width: 179px; width: 179px; 
 	}
 	
 	/*
-	**************** BG, FG *******************
+	**************** BG, FG *****************************
 	*/
 	.Background { 
 		position: fixed; top:0; left:0;
@@ -88,7 +110,7 @@ echo "
 	}
 	
 	/*
-	**************** HEADERS *******************
+	**************** HEADERS ****************************
 	*/
 	 
 	.sprite.country-flag-small { 
@@ -116,20 +138,7 @@ echo "
 		text-align: right;
 		text-shadow: 1px 1px #777;
 	}
-	
-	#footer {
-		min-width:808px; width:808px;
-		min-height:44px; height:44px;
-		margin-right:auto; margin-left:auto;
-		padding-top: 30px;
-		background-color: none;
-		font-size: 14px; color: #222288;
-		text-shadow: 1px 1px 1px #eee;
-		/*border: 1px solid rgba(0,0,0,0.7);*/ 
-	}
-		#footer a { color: #222; text-shadow: none;}
-		#footer a:hover { text-decoration: underline;}
-	
+	#record-service-modal .header {font-family: 'raleway', san-serif, verdana; font-size: 48px; font-weight: 200;}
 	#header {
 		text-align: left;
 		min-height:100px; height:100px;
@@ -146,7 +155,7 @@ echo "
 		}
 			.sprite.sch-logo { 
 				float: left;
-				background-position: -15px 0px;
+				background-position: -10px 0px;
 				/*border: 1px solid blue;*/
 				z-index:100;
 				margin-left: 1em;
@@ -168,7 +177,7 @@ echo "
 				/*border: 1px solid blue;*/
 				height: 15px;
 				width: 280px;
-				font-family: sans-serif, verdana; font-size: 14px; font-weight: 500;
+				font-family: 'Raleway', sans-serif, verdana; font-size: 14px; font-weight: 500;
 				/*font-style: oblique;*/
 				color: white;
 				text-shadow: 1px 1px #777;
@@ -181,7 +190,7 @@ echo "
 				min-width: 500px;
 				height: 45px;
 				width: 500px;
-				font-family: sans-serif, verdana; font-size: 24px; font-weight: 900;
+				font-family: 'Raleway', sans-serif, verdana; font-size: 31px; font-weight: 900;
 				font-style: normal;
 				color: white;
 				text-shadow: 1px 1px #777;
@@ -189,77 +198,82 @@ echo "
 			
 		.soc-channels {
 			float: right;
-			margin-top: 0;
+			margin-top: 10px;
 			margin-right: 1em;
 			/*border: 1px solid red;*/
 			min-height: 88px; height: 88px;
 			min-width: 179px; width: 179px;
-			
-			
 		}
 			.twitter {
 				float: left;
-				margin-top: 1.5em;
-				margin-left: 20px;
-				height: 32px;
-				width: 32px;
-				background: url(img/t.png) no-repeat;
-				-webkit-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
-				-moz-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
-				box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
+				margin-top: 2em;
+				margin-left: 22px;
+				height: 26px;
+				width: 30px;
+				border: 1px solid #bbbeb7;
+				border-radius: 5px;
+				background: url('../img/t.png') no-repeat;
+				-webkit-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
+				-moz-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
+				box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
 			}
+			.twitter .icon {z-index:20000; color:white; background-repeat: no-repeat; }
 			.twitter:hover {
-				/*background: url(img/t_hover.png) no-repeat;*/
-				-webkit-box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
-				-moz-box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
-				box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
+				/*background: url('../img/t_hover.png') no-repeat;*/
+				-webkit-box-shadow: 0px 0px 0px 2px rgb(0,172,238);
+				-moz-box-shadow: 0px 0px 0px 2px rgb(0,172,238);
+				box-shadow: 0px 0px 0px 2px rgba(255,255,255,0.25);
 			}
 			
 			.google {
 				float: left;
-				margin-top: 1.5em;
+				margin-top: 2em;
 				margin-left: 20px;
-				height: 32px;
-				width: 32px;
-				background: url(img/g_hover.png) no-repeat;
-				-webkit-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
-				-moz-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
-				box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
+				height: 26px;
+				width: 30px;
+				border: 1px solid #bbbeb7;
+				border-radius: 5px;
+				background: url('../img/g.png') no-repeat;
+				-webkit-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
+				-moz-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
+				box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
 			}
 			.google:hover {
-				/*background: url(img/g_hover.png) no-repeat;*/
-				-webkit-box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
-				-moz-box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
-				box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
+				/*background: url('../img/g_hover.png') no-repeat;*/
+				-webkit-box-shadow: 0px 0px 0px 2px rgb(184,51,36);
+				-moz-box-shadow: 0px 0px 0px 2px rgb(184,51,36);
+				box-shadow: 0px 0px 0px 2px rgba(184,51,36,0.5);
 			}
 			
 			.facebook {
 				float: left;
-				margin-top: 1.5em;
+				margin-top: 2em;
 				margin-left: 20px;
-				height: 32px;
-				width: 32px;
-				background: url(img/f_hover.png) no-repeat;
-				-webkit-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
-				-moz-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
-				box-shadow: -1px 1px 1px 0px rgba(0,0,0,0.75);
+				height: 26px;
+				width: 30px;
+				border: 1px solid #bbbeb7;
+				border-radius: 5px;
+				background: url('../img/f.png') no-repeat;
+				-webkit-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
+				-moz-box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
+				box-shadow: -1px 1px 1px 0px rgba(0,0,0,0);
 			}
 			.facebook:hover {
-				/*background: url(img/f_hover.png) no-repeat;*/
-				-webkit-box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
-				-moz-box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
-				box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
+				/*background: url('../img/f_hover.png') no-repeat;*/
+				-webkit-box-shadow: 0px 0px 0px 2px rgb(59,88,158);
+				-moz-box-shadow: 0px 0px 0px 2px rgb(59,88,158);
+				box-shadow: 0px 0px 0px 2px rgb(59,88,158);
 			}
 			
 			.tell-friends {
 				margin-top: 65px;
-				padding-left: 25px;
+				text-align: center;
 				font-family: sans-serif, verdana; font-size: 16px; font-weight: 400;
 				font-style: normal;
 				/*border: 1px solid blue;*/
 				color: #dddddd;
 				height: 25px;
-				width: 137px;
+				width: 179px;
 			}
 	
 	/*
@@ -284,9 +298,9 @@ echo "
 		-webkit-border-radius: 0px 0px 25px 25px;
 	}
 		/*
-		******************************************
-		**************** RIGHT *******************
-		******************************************
+		***************************************************
+		**************** RIGHT ****************************
+		***************************************************
 		*/
 		#right-segement {
 			float: right;
@@ -299,7 +313,7 @@ echo "
 		}
 			
 			/*
-			**************** SEARCH *******************
+			**************** SEARCH ************************
 			*/
 			#search.ui.icon.input input {
 				padding-right: 3em !important;
@@ -360,7 +374,7 @@ echo "
 				width: 0em;
 				height: 2.6em;
 			}*/
-			.ui.ribbon.label:after {
+			/*.ui.ribbon.label:after {
 				position: absolute;
 				content: \"\";
 				top: 0%;
@@ -372,20 +386,34 @@ echo "
 				border-right-color: rgb(192,131,6);
 				border-left: 0em solid transparent;
 				width: 0em;
-				height: 2.6em;
+				height: 1.55em;
+			}*/
+			.ui.ribbon.label:after {
+				position: absolute;
+				content: \"\";
+				top: -58%;
+				left: 0%;
+				border-width: 0em 1em 1em 0em;
+				border-style: solid;
+				border-top: 1em solid transparent;
+				border-bottom: 1em solid transparent;
+				border-right-color: rgba(192,131,6,0.7);
+				border-left: 0em solid transparent;
+				width: 0em;
+				height: 0em;
 			}
 			.ui.ribbon.label {
 				position: relative;
 				margin: 0em 0em 1em 0em;
-				left: -2.8rem;
-				padding: 0.5rem 3rem 0.5rem 1.8rem;
+				left: -2.15rem; top: -0.1rem;
+				padding: 0.3rem 3rem 0.2rem 1.8rem;
 				border-radius: 0px 4px 4px 0px;
 				border-color: rgba(0, 0, 0, 0.15);
 				background-color: rgb(244,195,4);
-				font-family: sans-serif, verdana; font-size: 13px; font-weight: 400;
+				font-family: 'raleway', sans-serif, verdana; font-size: 18px; font-weight: 300;
 				font-style: normal;
-				color: white;
-				text-shadow: 1px 1px 1px #888;
+				color: rgb(59,88,158);
+				text-shadow: 1px 1px 1px rgba(255,255,255,1);
 				-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.7);
 				-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.7);
 				box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.7);
@@ -437,21 +465,22 @@ echo "
 					padding-left: 7.5px;
 					margin: 0 0 0 10px;
 					/*border-left: 10px solid #489ee7;*/
-					background: rgb(0,110,205);
+					background: rgb(0,0,255);
 				}
 				.vertical-menu .inet-service:hover,
 				.vertical-menu .record-service:hover,
 				.vertical-menu a:hover div{
 					color: #fff;
+					background: rgb(0,109,205);
 				}
 				.first-divider {
-					border-bottom: 1px solid rgb(107,176,235);
+					border-bottom: 1px solid rgba(255,255,255,0.8);
 					-webkit-box-shadow: -1px -1px 2px 0px rgba(0,0,0,0.5);
 					-moz-box-shadow: -1px -1px 2px 0px rgba(0,0,0,0.5);
 					box-shadow: -1px -1px 2px 0px rgba(0,0,0,0.5);
 				}
 				.next-divider {
-					border-bottom: 1px solid rgb(107,176,235);
+					border-bottom: 1px solid rgba(255,255,255,0.8);
 					-webkit-box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.5);
 					-moz-box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.5);
 					box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.5);
@@ -464,9 +493,9 @@ echo "
 				}
 				
 				/*
-				**************** RIGHT ATTACHED LABELS *******************
+				**************** RIGHT ATTACHED LABELS ********************************
 				*/
-				#channel-bg { background: rgb(207,228,247); border-radius:0px;}
+				#channel-bg { background: rgb(184,216,244); border-radius:0px;}
 				#channel-header-bg { color: rgb(99,108,118); font-weight: bold;}
 				
 				.youtube-channel {
@@ -570,7 +599,7 @@ echo "
 			/*border: 1px solid black;*/
 		}
 			/*
-			**************** PRIMARY CONTENT *******************
+			**************** PRIMARY CONTENT ****************************************************************************
 			*/
 			#primary-content {
 				background: url('sections/left/primary/background.pn') no-repeat scroll 0% 0% / 100% auto rgb(21,150,159);
@@ -598,7 +627,7 @@ echo "
 					/*border:1px solid red;*/
 				}
 			/*
-			**************** SECONDARY CONTENT *******************
+			**************** SECONDARY CONTENT ************************
 			*/
 			#secondary-content {
 				margin: 16px 0px;
@@ -615,9 +644,10 @@ echo "
 					.left-floated-column P.title {
 						width: 155px;
 						display: inline-block;
-						padding: 0.2em 0 0.2em 0; margin: 0em 0.5em;
-						font-size: 18px;
-						color: #555;
+						padding: 0.2em 0 0em 0; margin: 0em 0.5em;
+						font-family: 'raleway', sans-serif, verdana; font-weight: 400;
+						font-size: 24px;
+						color: #666;
 					}
 					.left-floated-column span.overview  {
 						width: 155px;
@@ -663,24 +693,23 @@ echo "
 			#recent-additions {
 				margin: 0 0 16px 0;
 				text-align: left;
-				height: 95px;
+				height: 96px;
 				width: 550px;
 			}
 			#recent-additions h3{
 				height: 16px;
 				display: inline-block;
-				padding: 0.2em 0.4em; margin: 0em 0em 0em 0.05em;
+				
+				min-height: 1.6em; height: 1.6em;
+					padding-top: .2em;
+					padding-left: 7.5px; padding-right: 7.5px;
+					margin: 0 0 0 0;
+					/*border-left: 10px solid #489ee7;*/
+					background: rgb(78,110,241);
 				font-family: sans-serif, verdana; font-size: 12px; font-weight: 400;
 				font-style: normal;
-				color: rgba(0,0,0,0.7);
-				text-rendering: optimizelegibility;
-				/*text-shadow: 1px 1px 0px #444;*/
-				background: rgba(0,110,205,0.2);
-				border: 1px solid rgb(211,211,211);
+				color: rgba(255,255,255,0.9);
 				border-bottom: none;
-				border-radius: 5px 5px 0px 0px;
-				-moz-border-radius: 5px 5px 0px 0px;
-				-webkit-border-radius: 5px 5px 0px 0px;
 			}
 			#recent-additions a { 
 				float: right; padding: 0.2em 0em; margin: 0.14em 0em 0em 0em;
@@ -748,14 +777,14 @@ echo "
 				}
 				.clear { clear: both; }
 			/*
-			**************** SCHOOL STATISTICS *******************
+			**************** SCHOOL STATISTICS ****************
 			*/	
 			#isometric-grid {
-				height:117px;
+				height:660px;
 				width: 749px;
-				margin: -23px 0 -27px 0;
+				margin: -23px 0 -570px 0;
 				border-top: 1px solid rgb(211,211,211);
-				background: url(img/isometric-grid.png) repeat;
+				background: {$isometric_grid};
 			}
 			#sch-stats {
 				height:65px;
@@ -873,7 +902,6 @@ echo "
 							background: rgba(247,247,247,0);
 						}
 						
-				
 				#sch-stats .sch-status {
 					float: left;
 					margin-left: 1px;
@@ -899,7 +927,7 @@ echo "
 							height: 18px;
 							padding-top: 2px;
 							font-family: sans-serif, verdana; font-size: 18px; font-weight: 300;
-							color: rgba(0,0,0,1);
+							color: rgba(0,0,200,1);
 							background: rgba(247,247,247,0);
 							border-left: 1px solid rgb(211,211,211);
 						}
@@ -919,26 +947,23 @@ echo "
 							border-left: 1px solid rgb(211,211,211);
 							background: rgba(247,247,247,0);
 						}		
-				
-						
-						
-						
-						
-						
 						
 			/*
-			**************** FLUID GRID *******************
+			**************** FLUID GRID ******************
 			*/			
 			#fluid-grid {
 				width:100%;
-				height: 543px;
+				height: 540px;
 				margin: 25px 0 0 0;
 				padding: 0.5px 0 0 0;
-				background: rgba(72,158,231,0.25); 
+				background: rgba(72,158,231,0.3); 
 				border-top: 2px solid rgb(110,207,245);
-				/*border-radius: 6px 6px 0px 0px;
+				border-right: 1px solid rgb(241,241,241);
+				border-bottom: 1px solid rgb(241,241,241);
+				border-left: 1px solid rgb(241,241,241);
+				border-radius: 2px 2px 0px 0px;
 				-moz-border-radius: 0px 10px 0px 0px;
-				-webkit-border-radius: 0px 10px 0px 0px;*/
+				-webkit-border-radius: 0px 10px 0px 0px;
 			}
 				#fluid-grid-noise {
 					width:100%;
@@ -970,8 +995,8 @@ echo "
 						height: 62px;
 						width: 62px;
 						margin: 0 0 0 26px;
-						background: rgba(72,158,231,0.4);
-						
+						background: rgba(72,158,231,0.3);
+						border: 2px solid rgba(25,124,210,0.1);
 						float: left;
 						opacity: 0.9;
 						transition-property: opacity;
@@ -980,12 +1005,12 @@ echo "
 						-moz-border-radius: 10px;
 						-webkit-border-radius: 10px;
 					}
-					#fluid-grid ul li#history a i { padding-top: 14px; }
-					#fluid-grid  ul li#counselling a i { padding: 12px 21px; }
-					#fluid-grid ul li#academics a i { padding-top: 14px; }
-					#fluid-grid ul li#admissions a i { padding-top: 14px; }
-					#fluid-grid ul li#sports a i { padding-top: 14px; }
-					#fluid-grid ul li#pta a i { padding-top: 14px; }
+					#fluid-grid ul li#history a i { padding-top: 13px; }
+					#fluid-grid  ul li#counselling a i { padding: 13px 19px; }
+					#fluid-grid ul li#academics a i { padding-top: 13px; }
+					#fluid-grid ul li#admissions a i { padding-top: 13px; }
+					#fluid-grid ul li#sports a i { padding-top: 13px; }
+					#fluid-grid ul li#pta a i { padding-top: 13px; }
 					
 					#fluid-grid ul li#history, 
 					#fluid-grid ul li#counselling,
@@ -1001,8 +1026,6 @@ echo "
 						margin-left: -40px;
 					}
 					
-					
-					
 					#fluid-grid a h3 {
 						font-size: 18px;
 						font-weight: bold;
@@ -1014,6 +1037,7 @@ echo "
 						padding: 0;
 						border: 0px none;
 					}
+					
 					#fluid-grid a p {
 						font-size: 13px;
 						line-height: 17.6px;
@@ -1021,9 +1045,42 @@ echo "
 						margin: 0px 0px 11px 96px;
 						padding: 0px;
 						border: 0px none;
-						
 					}
-				
-</style>
-	";
+					
+	#footer {
+		min-width:808px; width:808px;
+		min-height:44px; height:44px;
+		margin-right:auto; margin-left:auto;
+		padding-top: 30px;
+		background-color: none;
+		font-size: 14px; color: #222288;
+		text-shadow: 1px 1px 1px #ddd;
+		/*border: 1px solid rgba(0,0,0,0.7);*/ 
+	}
+		#footer a { color: #222; text-shadow: none;}
+		#footer a:hover { text-decoration: underline;}
+		
+"; 
+	$this_file  = __FILE__;
+	$last_css_modify_time = filemtime($this_file);
+	
+	if ( !isset ($modified_css) )
+	{
+		ob_start();
+		echo $output;	
+		$css_content = ob_get_contents();
+		ob_end_clean();
+		$cwd = getcwd();
+		$css_file = $cwd."/". $css_main_file_path;
+		//@chmod($css_file,0755);
+	   	$writable_file = fopen($css_file, "w");
+	   	$data_size = strlen($css_content);
+	   	fputs($writable_file,$css_content, $data_size);
+	   	fclose($writable_file);
+   	} 
+   	elseif ( isset ($modified_css) && $modified_css < $last_css_modify_time ) 
+   	{
+   		unset($_SESSION["modified_css"]);
+   	}
 ?>
+
