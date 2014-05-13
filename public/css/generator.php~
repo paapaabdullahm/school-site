@@ -78,14 +78,14 @@
 	.blue-bordered {border: 1px solid blue;}
 	.green-bordered {border: 1px solid green;}
 	.black-bordered {border: 1px solid black;}
-	.white-bordered {border: 1px solid #fcfcfc;}
+	.white-bordered {border: 1px solid #f4f4f4;}
 	.yellow-bordered {border: 1px solid yellow;}
 	
 	.thick-red-bordered {border: 3px solid red;}
 	.thick-blue-bordered {border: 3px solid blue;}
 	.thick-green-bordered {border: 3px solid green;}
 	.thick-black-bordered {border: 3px solid black;}
-	.thick-white-bordered {border: 3px solid #fcfcfc;}
+	.thick-white-bordered {border: 3px solid #f4f4f4;}
 	.thick-yellow-bordered {border: 3px solid yellow;}
 	
 	.sch-coloured { 
@@ -138,7 +138,32 @@
 		text-align: right;
 		text-shadow: 1px 1px #777;
 	}
-	#record-service-modal .header {font-family: 'raleway', san-serif, verdana; font-size: 48px; font-weight: 200;}
+	
+	#record-service-registration-modal,
+	#record-service-login-modal {
+	 	background: rgba(72,158,231,0.9); 
+	 	border-radius: 0em; border: none; 
+	 	color: #eee;
+	 	font-family: sans-serif, verdana; 
+	 	font-style: normal;
+		font-weight: 900; 
+	}
+	#record-service-registration-modal .button,
+	#record-service-login-modal .button { 
+	 	border-radius: 0em; border: none; 
+	 	 
+	}
+	#record-service-login-modal {position: absolute; min-width: 579px; max-width: 100%;}
+	#record-service-login-modal .header {font-family: 'raleway', san-serif, verdana; font-size: 48px; font-weight: 200;}
+	#record-service-registration-modal {position: absolute; min-width: 600px; max-width: 100%;}
+	#record-service-registration-modal .header {font-family: 'raleway', san-serif, verdana; font-size: 48px; font-weight: 200;}
+	#record-service-registration-modal h1 {color: #444; font-size: 18px; font-weight: 400;padding-left: 1em;}
+	#record-service-registration-modal .field .text {color: #444; font-weight: 400;}
+	#record-service-registration-modal #wrapper.field {margin-bottom: 0;}
+	#record-service-registration-modal .field .dropdown span {display:inline; color: #d1d1d1; font-weight: 400;}
+	#record-service-registration-modal .field .checkbox {color: #777; font-weight: 400;}
+	#record-service-registration-modal .field .checkbox a {color: #0000ff; font-weight: 400;text-decoration: underline;}
+	#record-service-registration-modal .field .agree {color: #777; font-weight: 400;}
 	#header {
 		text-align: left;
 		min-height:100px; height:100px;
@@ -285,7 +310,7 @@
 	*/		
 	#content {
 		min-height:1154px; height:1154px;
-		background-color: #fcfcfc; 
+		background-color: rgb(244,244,244); 
 		-moz-border-radius: 1px;     
 		-webkit-border-radius: 1px;  
 		border-radius: 1px; 
@@ -422,19 +447,6 @@
 			/*
 			**************** MENU *******************
 			*/
-			#record-service-modal {
-			 	background: rgba(72,158,231,0.8); 
-			 	border-radius: 0em; border: none; 
-			 	color: #eee;
-			 	font-family: sans-serif, verdana; 
-			 	font-style: normal;
-				font-weight: 900; 
-			}
-			#record-service-modal .button { 
-			 	border-radius: 0em; border: none; 
-			 	 
-			}
-			
 			.vertical-menu {
 				min-width: 179px; width: 179px;
 				text-align: left;
@@ -953,7 +965,7 @@
 			*/			
 			#fluid-grid {
 				width:100%;
-				height: 542px;
+				height: 540px;
 				margin: 25px 0 0 0;
 				padding: 0.5px 0 0 0;
 				background: rgba(72,158,231,0.3); 
