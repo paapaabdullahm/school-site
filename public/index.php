@@ -24,13 +24,13 @@
 		}*/
 	
 echo "<!doctype html>
-<html lang=\"en\">
+<html lang=\"en\" ng-app>
 <head><title>". explode ( ".", strtoupper($host) )[0] ."</title>"; 
 	
 	//require_once ("fonts/raleway/generator.php");
 	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"fonts/raleway/raleway.css\" />";
 	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"fonts/fontawesome/css/font-awesome.css\" />";
-	echo "<link rel=\"stylesheet\" type=\"text/css\" class=\"ui\" href=\"layouts/semantic/css/semantic.css\" />";
+	echo "<link rel=\"stylesheet\" type=\"text/css\" class=\"ui\" href=\"layouts/semantic_0.16/css/semantic.min.css\" />";
 	require_once ("css/generator.php"); 
 	echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"{$css_main_file_path}\" />";
 	
@@ -477,6 +477,7 @@ echo "<!doctype html>
 	}
 	
 	// Record Service Login Modal
+	
 	echo "
 	<div id='record-service-login-modal' class=\"ui modal record-service-login\">
 	  <div class=\"header\">Record Service Login</div>
@@ -525,18 +526,19 @@ echo "<!doctype html>
 	";
 	
 	// Record Service Registration Modal
+	
 	echo " 
 	<div id='record-service-registration-modal' class=\"ui modal record-service-registration\">
 	  <div class=\"header\">Record Service Registration</div>
 	  <div class=\"content\">
 		<div class=\"container\"> 
-		  <h1>Kindly fill out ( read the Terms and Conditions first ) and submit the following form</h1>
+		  <h1>Kindly fill out and submit the following form</h1>
 
-		  <div class=\"ui form segment\">   
+		  <div class=\"ui form segment\" ng-controller=\"RegisterController\">   
 			<div class=\"two fields\">
 				<div class=\"field\">
-					<label for=\"Name\">Name</label>
-					<input id=\"Name\" placeholder=\"Enter Your Full Name\" type=\"text\" />
+					<label for=\"FullName\">Full Name</label>
+					<input id=\"FullName\" placeholder=\"Enter Your Full Name\" type=\"text\" />
 				</div>
 				<div id=\"wrapper\" class=\"field\">
 				<div class=\"two fields\">
@@ -553,11 +555,11 @@ echo "<!doctype html>
 					</div>
 				</div>
 				<div class=\"field\">
-					<label for=\"Usercategory\">Category</label> 
+					<label for=\"Usertype\">User Type</label> 
 					<div class=\"ui fluid selection dropdown\">
 						<div class=\"text\"><span>Select</span></div>
 					  	<i class=\"dropdown icon\"></i>
-					  	<input id=\"Usercategory\" name=\"Usercategory\" type=\"hidden\">
+					  	<input id=\"Usertype\" name=\"Usertype\" type=\"hidden\">
 						<div class=\"menu\">
 						  	<div class=\"item\">Parent</div>
 						  	<div class=\"item\">Guardian</div>
@@ -571,20 +573,29 @@ echo "<!doctype html>
 			
 			<div class=\"two fields\">
 				<div class=\"field\">
-				  	<label for=\"Email\">Email</label>
-				  	<input id=\"Email\" placeholder=\"Enter a valid Address\" type=\"text\">
+				  <label for=\"Email\">Email</label>
+				  <input id=\"Email\" placeholder=\"Enter a valid Address\" type=\"text\">
 				</div>
 				<div class=\"field\">
-				  	<label for=\"Mobile-num\">Mobile</label>
-				  	<input id=\"Mobile-num\" placeholder=\"Enter a valid Number\" type=\"text\">
+				  <label for=\"MobileNumber\">Mobile Number</label>
+				  <input id=\"MobileNumber\" placeholder=\"Enter a valid Number\" type=\"text\">
+				   <!--div class=\"ui pointing label\">
+						Please enter a number
+					</div-->
 				</div>
 			</div>
 			
+			<div class=\"two fields\">
 			<div class=\"field\">
 			  <label for=\"Username\">Username</label>
 			  <input id=\"Username\" placeholder=\"Username\" type=\"text\">
 			</div>
-
+			<div class=\"field\">
+				<label for=\"TrackingId\">Tracking ID</label>
+				<input id=\"TrackingId\" placeholder=\"Enter a valid Student ID\" type=\"text\">
+			</div>
+			</div>
+			
 			<div class=\"field\">
 			  <label for=\"Password\">Password</label>
 			  <input id=\"Password\" placeholder=\"Six characters max\" type=\"password\">
@@ -596,10 +607,10 @@ echo "<!doctype html>
 			</div>
 			<div class=\"inline field\">
 				<span class=\"ui checkbox\">
-				  <input type=\"checkbox\"><label></label>
-				</span><span class='agree'>I agree to the <a href=\"\">Terms and Conditions</a></span>
+				  <input id=\"Terms\" type=\"checkbox\"><label>I agree to the Terms and Conditions</label>
+				</span><span class='agree'>( <i href=\"\">read first</i> )</span>
 			 </div>
-			<button class=\"ui blue button\">Submit</button>
+			<button class=\"ui blue button\" ng-click=\"register()\">Submit</button>
 		  </div>
 		</div>
 	  </div>
@@ -609,16 +620,15 @@ echo "<!doctype html>
 	</div>
 	";
 ?>	
+
 	<!--____Start JS From Here___________________________________________________-->
 	
 	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="layouts/semantic/javascript/semantic.js"></script>
+	<script src="layouts/semantic_0.16/javascript/semantic.js"></script>
 	<script src="js/angular.min.js"></script>
-	
 	<script src="js/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
 	<script src="js/smooth-scroll.js"></script>
 	<script type="text/javascript"> smoothScroll.init(); </script>
-	
 	<script type="text/javascript"> 
 		$(function() { 
 		$("#recent-additions-content")
@@ -634,32 +644,144 @@ echo "<!doctype html>
 	
 	<script type="text/javascript"> 
 		$('.record-service-login.modal')
+			.modal({detachable:false})
 			.modal('setting', 'closable', false)
-			.modal(
-					'attach events', 
-					'.record-service', 
-					'show'
-				);
-		$('.record-service-registration.modal')
-			.modal('setting', 'closable', false)
-			.modal(
-					'attach events', 
-					'.record-service-registration', 
-					'show'
-				);
-		/*
-		$( "#record-service-login-modal .register" ).click(function() {
-			$( "#record-service-login-modal" ).hide( "slow" );
-			$( "#record-service-registration-modal" ).show( "slow" );
-		});
-		*/
-	</script>
-	<script type="text/javascript">$('.ui.dropdown') .dropdown();</script>
-	<script type="text/javascript">$('.ui.checkbox') .checkbox();</script>
-	<!--____Stop JS From Here____________________________________________________-->
+			.modal('attach events', '.record-service', 'show')
+			;
+	</script>	
 	
+	<script type="text/javascript"> 
+		
+		$('.record-service-registration.modal')
+			.modal({detachable:false})
+			.modal('setting', 'closable', true)
+			.modal('attach events', '.record-service-registration', 'show')
+			;
+		
+		
+		//$( "#record-service-login-modal .record-service-registration" ).click(function() {
+			//$( "#record-service-login-modal" ).hide( "fast" );
+			//$( "#record-service-registration-modal" ).show( "slow" );
+		//});
+		
+	</script>	
+	
+	<script type="text/javascript">
+	$('.ui.selection.dropdown') .dropdown();
+	$('.ui.checkbox') .checkbox();
+	
+  (function ($) {
+    $('.ui.form').form({        
+      fullname: {
+        identifier: 'FullName',
+        rules: [{
+          type: 'empty',
+          prompt: 'Required'
+        }]
+      },       
+      gender: {
+				identifier: 'Gender',
+				rules: [{
+					type: 'empty',
+					prompt: 'Required'
+				}]
+			}, 
+			usertype: {
+				identifier: 'Usertype',
+				rules: [{
+					type: 'empty',
+					prompt: 'Required'
+				}]
+			},      
+      email: {
+        identifier: 'Email',
+        rules: [{
+          type: 'empty',
+          prompt: 'Required'
+        },{
+          type: 'email',
+          prompt: 'Email not valid'
+        }]
+      },
+      mobilenumber: {
+				identifier: 'MobileNumber',
+				rules: [{
+					type: 'empty',
+					prompt: 'Required'
+				},{
+					type: 'mobile',
+					prompt: 'Invalid'
+				},{
+					type: 'length[10]',
+					prompt: 'Must be 10 digits'
+				}]
+			},
+      username: {
+        identifier: 'Username',
+        rules: [{
+          type: 'empty',
+          prompt: 'Required'
+        }]
+      },       
+      trackingid: {
+				identifier: 'TrackingId',
+				rules: [{
+					type: 'empty',
+					prompt: 'Required'
+				}]
+			},     
+      password: {
+        identifier: 'Password',
+        rules: [{
+          type: 'empty',
+          prompt: 'Required'
+        },{
+          type: 'length[6]',
+          prompt: 'Must be 6 characters long'
+        }]
+      },       
+      passwordConfirm: {
+        identifier: 'PasswordConfirm',
+        rules: [{
+          type: 'match[Password]',
+          prompt: 'Password don\'t match'
+        }]
+      },
+      terms: {
+				identifier : 'Terms',
+				rules: [{
+					type   : 'checked',
+					prompt : 'Must agree to the terms'
+				}]
+			}
+    }, {
+      on: 'blur',
+      inline: 'true'
+    });
+  }(jQuery));
+  
+	function RegisterController($scope, $element) {
+		var registrationForm = $($element);
+
+		$scope.isInvalid = function() {
+			return !registrationForm.form('validate form');
+		};
+
+		$scope.register = function () {
+			if (this.isInvalid()) {
+				return;
+			}
+
+			alert("Register was clicked!");
+		};
+	}
+	
+	</script>
+	<!--____Stop JS From Here____________________________________________________-->
+
 <?php
 echo "
+
 </body>
 </html>";
 }

@@ -153,9 +153,13 @@
 	 	border-radius: 0em; border: none; 
 	 	 
 	}
-	#record-service-login-modal {position: absolute; min-width: 579px; max-width: 100%;}
+	
+	/*.ui.dimmer {
+		position: fixed!important; 
+	}*/
+	#record-service-login-modal {position: absolute; top:34.1%; min-width: 579px; max-width: 100%;}
 	#record-service-login-modal .header {font-family: 'raleway', san-serif, verdana; font-size: 48px; font-weight: 200;}
-	#record-service-registration-modal {position: absolute; min-width: 600px; max-width: 100%;}
+	#record-service-registration-modal {position: absolute; top:34.1%; min-width: 600px; max-width: 100%;}
 	#record-service-registration-modal .header {font-family: 'raleway', san-serif, verdana; font-size: 48px; font-weight: 200;}
 	#record-service-registration-modal h1 {color: #444; font-size: 18px; font-weight: 400;padding-left: 1em;}
 	#record-service-registration-modal .field .text {color: #444; font-weight: 400;}
@@ -163,7 +167,8 @@
 	#record-service-registration-modal .field .dropdown span {display:inline; color: #d1d1d1; font-weight: 400;}
 	#record-service-registration-modal .field .checkbox {color: #777; font-weight: 400;}
 	#record-service-registration-modal .field .agree {color: #777; font-weight: 400;}
-	#record-service-registration-modal .field .agree a {color: #0000ff; font-weight: 400;text-decoration: underline;}
+	#record-service-registration-modal .field .agree i {color: red; font-weight: 400; font-style: normal; cursor: pointer;}
+	#record-service-registration-modal .field .agree i:hover {text-decoration: underline;}
 	
 	#header {
 		text-align: left;
