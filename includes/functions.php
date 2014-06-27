@@ -9,10 +9,10 @@
 
 		$adjustment = 0;
 
-		if($isDST == false && $systemDST == true)
+		if ($isDST == false && $systemDST == true)
 		    $adjustment = 3600;
 	   
-		else if($isDST == true && $systemDST == false)
+		else if ($isDST == true && $systemDST == false)
 		    $adjustment = -3600;
 
 		else
@@ -20,4 +20,13 @@
 
 		return ($time + $adjustment);
 	} 
+	
+	function redirect_to($location = NULL)
+	{
+		if ($location != NULL)
+		{
+			header("Location: {$location}");
+			exit;
+		}
+	}
 ?>

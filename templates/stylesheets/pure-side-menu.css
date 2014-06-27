@@ -1,0 +1,310 @@
+body {
+   color: #444;
+   /*	text-shadow: 1px 0px #ccc;*/
+   font-family: sans-serif, verdana;
+   position: relative;
+}
+print { 
+	position: absolute; top:2px; right:74px; 
+	color: #f4f4f4;
+	font-size: 22px;
+	height: 22px;
+	padding: 0 4px 4px 4px;
+	border: 1px solid rgb(31,141,214);
+	cursor: pointer;
+}
+		print:hover {color: white;}
+ul,li {
+	list-style:none;
+}
+.section li {margin-top: -29px; margin-left: 0;}
+.right-caret-bullet:after {
+	font-family: FontAwesome;
+	font-size: 1.6em;
+	font-style: normal;
+	color: rgba(0,0,0,0.5);
+	content: "\f0da";
+	display: inline-block;
+	margin-left: -25px;
+}
+
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+    #layout.active {
+        position: relative;
+        left: 250px;
+    }
+        #layout.active #menu {
+            left: 250px;
+            width: 250px;
+        }
+
+        #layout.active .menu-link {
+            left: 250px;
+        }
+/*
+The content `<div>` is where all your content goes.
+*/
+#topnav {
+	position: fixed; top:0; left:0;
+	width: 100%; min-width: 400px;
+	min-height: 34px; max-height: 34px;
+	background: rgba(31,141,214,1);
+	border-bottom: 4px solid blue;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	z-index: 9;
+}
+#topnav h2 {
+	color: #ffffff; 
+	text-transform: uppercase; 
+	text-shadow: none; 
+	margin: 2px 50px 0 100px;
+}
+.pure-home-heading, .pure-home-heading:hover {
+	margin: -30px 40px; text-align:right; float:right; color: white; font-size: 1.5em;
+}
+
+#main {
+	margin: 38px 25px 25px;
+	padding-bottom: 75px;
+	background: #ffffff;
+	border: 2px solid #ffffff;
+	
+	border-radius: 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+}
+#main h2 {font-weight: 300;}
+.section {
+		padding-top: 34px;
+		height: 100%;
+		margin-bottom: -34px;
+}
+.header {
+		margin: 0;
+		color: #333;
+		text-align: left;
+		padding: 10px 0;
+		border-bottom: 1px solid #ccc;
+ }
+    .header h1 {
+        margin: 0.213em 25px;
+        font-size: 3em;
+        font-weight: 300;
+        color: #444;
+         
+    }
+     .header h2 {
+        font-weight: 300;
+        color: #ccc;
+        padding: 0;
+        margin-top: 0;
+    }
+    
+.content {
+    margin: 0 25px;
+    padding: 0 0 4px 0;
+    max-width: 100%;
+    margin-bottom: 0;
+    line-height: 1.6em;
+    text-align: left;
+}
+.content-subhead {
+    font-family: serif, sans-serif, verdana; font-weight: 400;
+    color: rgb(31,141,214);
+    margin-bottom: 0;
+    text-shadow: 1px 0px rgb(31,141,214);
+}
+
+
+
+/*
+The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page.
+*/
+
+#menu {
+    position: fixed; top: 115px; left: 0; bottom: 0;
+    margin-left: -250px; /* "#menu" width */
+    width: 242px; height: 350px;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: rgba(0,0,0,0);
+    border: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+    #menu a {
+        color: rgba(255,255,255,0.8);
+        text-shadow: none;
+        border: none;
+        padding: 0.4em 0 0.4em 1em;
+    }
+    
+    #menu i {
+        padding: 0 0 1.29em 0.6em;
+    }
+
+     #menu .pure-menu,
+     #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+   
+    #menu .pure-menu li,
+    #menu .pure-menu .menu-item-divided { border-top: 1px dotted rgba(255,255,255,0.8);}
+    #menu .pure-menu .bottom-menu-item-divided { border-bottom: 1px dotted rgba(255,255,255,0.8);}    
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
+            background: rgba(255,255,255,0.1);
+        }
+
+    #menu .pure-menu-selected
+    /*#menu .pure-menu-heading*/ {
+        font-weight: bold;
+        color: #fff;
+    }
+         #menu .pure-menu-selected:before {
+            font-family: FontAwesome;
+					 	content: "\f054";
+					 	font-size: 1em; 
+					 	display: inline-block;
+					 	padding-right: 0.5em;
+        }
+    
+    #menu .pure-menu-heading {
+        font-size: 110%;
+        color: #fff;
+        margin: 0;
+    }
+
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+/*
+The button to open/close the Menu is custom-made and not part of Pure. Here's
+how it works:
+*/
+
+/*
+`.menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menu-link {
+    position: fixed;
+    display: block; /* show this only on small screens */
+    top: 0;
+    left: 250px; /* "#menu width" */
+    margin-left: -225px;
+    background: rgba(0,0,0,0.2);
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 1.6em 1.2em;
+}
+
+    .menu-link:hover,
+    .menu-link:focus {
+        background: rgba(0,0,0,0.4);
+    }
+		
+    .menu-link span {
+        position: relative;
+        display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+        background-color: #fff;
+        width: 100%;
+        height: 0.2em;
+    }
+
+        .menu-link span:before,
+        .menu-link span:after {
+            position: absolute;
+            margin-top: -0.6em;
+            content: " ";
+        }
+
+        .menu-link span:after {
+            margin-top: 0.6em;
+        }
+
+#footer {
+	padding-left: 0;
+	margin-top: 0;	
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+
+    #topnav h2 {margin: 2px 50px 0 37px;}
+    .header,
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #layout {
+        padding-left: 250px; /* left col width "#menu" */
+        left: 0;
+    }
+    
+    #main {
+				margin: 64px 80px 0 50px;
+				border-radius: 20px;
+				-webkit-border-radius: 20px;
+				-moz-border-radius: 20px;
+    }
+    
+    #menu {
+        left: 250px;
+        margin-left: -225px;
+    }
+
+    .menu-link {
+        position: fixed; left: -275px;
+        margin-left: 24px;
+        display: block;
+    }
+
+    #layout.active .menu-link {
+        left: 0;
+    }
+    #footer {
+			padding-left: 250px;
+			margin-top: 0;	
+		}
+}

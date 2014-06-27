@@ -1,0 +1,32 @@
+<?php
+	class Template 
+	{
+	  public $assigned_vars = array()
+	  ;
+		public function assign($key, $value) 
+		{
+	    $this->assigned_vars[$key] = $value;
+	  }
+	  
+		public function display($filename) 
+		{
+		 	$filename = TPL_PATH.DS.$filename
+		 	;
+		  if (file_exists($filename)) 
+		  {
+		    $output = file_get_contents($filename)
+		    ;
+		    foreach ($this->assigned_vars as $key => $value) 
+		    {
+		      $output = preg_replace('/{\$'.$key.'}/', $value, $output);
+		    }
+		   	echo $output
+		   	;
+		  } else {
+		    echo "*** Missing template error ***";
+		  }
+		}
+	}
+	$template = new Template()
+	;
+?>
