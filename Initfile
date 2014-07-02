@@ -53,26 +53,26 @@ defined('U5') ? null : define('U5', '..'.DS.'..'.DS.'..'.DS.'..'.DS.'..');
 
 // Define the main directory structure paths
 defined('ASSET_PATH') ? null : define('ASSET_PATH',	'assets');
-defined('INC_PATH') ? null : define('INC_PATH', 'includes');
-defined('MOD_PATH') ? null : define('MOD_PATH', 'modules');
-defined('TPL_PATH') ? null : define('TPL_PATH',	'templates');
+defined('INC_PATH')   ? null : define('INC_PATH', 'includes');
+defined('MOD_PATH')   ? null : define('MOD_PATH', 'modules');
+defined('TPL_PATH')   ? null : define('TPL_PATH',	'templates');
 
 // Define assets sub directory
-defined('CACHE_PATH') ? null : define('CACHE_PATH', ASSET_PATH.DS.'cache');
-defined('COMPILE_PATH')	? null : define('COMPILE_PATH', ASSET_PATH.DS.'templates_c');
-defined('LOG_PATH')	? null : define('LOG_PATH', ASSET_PATH.DS.'logs');
+defined('CACHE_PATH')  ? null : define('CACHE_PATH', ASSET_PATH.DS.'cache');
+defined('LOG_PATH')	   ? null : define('LOG_PATH', ASSET_PATH.DS.'logs');
 defined('UPLOAD_PATH') ? null : define('UPLOAD_PATH', ASSET_PATH.DS.'uploads');
 
 // Define public sub directory
 defined('IFRAME_PATH') ? null : define('IFRAME_PATH', TPL_PATH.DS.'iframes');
-defined('CSS_PATH') ? null : define('CSS_PATH', TPL_PATH.DS.'stylesheets');
-defined('JS_PATH') ? null : define('JS_PATH', TPL_PATH.DS.'javascripts');
-defined('FONT_PATH') ? null : define('FONT_PATH', TPL_PATH.DS.'fonts');
-defined('IMG_PATH') ? null : define('IMG_PATH', SITE_ROOT.DS.TPL_PATH.DS.'images');
+defined('CSS_PATH')    ? null : define('CSS_PATH', TPL_PATH.DS.'stylesheets');
+defined('JS_PATH')     ? null : define('JS_PATH', TPL_PATH.DS.'javascripts');
+defined('FONT_PATH')   ? null : define('FONT_PATH', TPL_PATH.DS.'fonts');
+defined('IMG_PATH')    ? null : define('IMG_PATH', SITE_ROOT.DS.TPL_PATH.DS.'images');
 
 // Define smarty directories
-defined('SMARTY_PATH') ? null : define('SMARTY_PATH', INC_PATH.DS.'smarty');
-defined('CONFIG_PATH') ? null : define('CONFIG_PATH', SMARTY_PATH.DS.'configs');
+defined('SMARTY_PATH')  ? null : define('SMARTY_PATH', INC_PATH.DS.'smarty');
+defined('CONFIG_PATH')  ? null : define('CONFIG_PATH', SMARTY_PATH.DS.'configs');
+defined('COMPILE_PATH')	? null : define('COMPILE_PATH', ASSET_PATH.DS.'templates_c');
 
 // load config file first
 require_once(INC_PATH.DS.'config.php');
@@ -144,26 +144,26 @@ if (isset ($_GET['token']))
 $page_title = ($node == 'about') ? ucwords('about'." ".$config['sch_name_short']) : ucwords(implode(" ", explode("_",$node)));
 
 //header assignments
-$template->assign('page_title', 		$page_title);
-$template->assign('raleway_font_path', 		FONT_PATH.DS.'raleway'.DS.'raleway.css');
-$template->assign('fontawesome_path', 		FONT_PATH.DS.'fontawesome'.DS.'css'.DS.'font-awesome.min.css');
-$template->assign('semantic_css_file', 		CSS_PATH.DS.'semantic.css');
-$template->assign('pure_ui_css_file', 		CSS_PATH.DS.'pure-ui.css');
+$template->assign('page_title', 		        $page_title);
+$template->assign('raleway_font_path', 		    FONT_PATH.DS.'raleway'.DS.'raleway.css');
+$template->assign('fontawesome_path', 		    FONT_PATH.DS.'fontawesome'.DS.'css'.DS.'font-awesome.min.css');
+$template->assign('semantic_css_file', 		    CSS_PATH.DS.'semantic.css');
+$template->assign('pure_ui_css_file', 		    CSS_PATH.DS.'pure-ui.css');
 $template->assign('pure_side_menu_css_file', 	CSS_PATH.DS.'pure-side-menu.css');
-$template->assign('j_rating_css_file', 		CSS_PATH.DS.'jRating.jquery.css');
-$template->assign('rating_css_file', 		CSS_PATH.DS.'rating.css');
-$template->assign('css_static_file', 	 	CSS_PATH.DS.$config['css_static_file']);
+$template->assign('j_rating_css_file', 		    CSS_PATH.DS.'jRating.jquery.css');
+$template->assign('rating_css_file', 		    CSS_PATH.DS.'rating.css');
+$template->assign('css_static_file', 	 	    CSS_PATH.DS.$config['css_static_file']);
 
 // body assignments
-$template->assign('sch_name_long',          ucwords($config['sch_name_long']));
-$template->assign('sch_name_short',         ucfirst($config['sch_name_short']));
-$template->assign('twitter_link',           $config['twitter']);
-$template->assign('google_link',            $config['google']);
-$template->assign('facebook_link',          $config['facebook']);
-$template->assign('assoc_plural',           $config['assoc_plural']);
-$template->assign('sch_status',             $config['sch_status']);
-$template->assign('sch_status_date',        $config['sch_status_date']);
-$template->assign('recent_additions_source',IFRAME_PATH.DS.'recent_additions'.DS.'index.php');
+$template->assign('sch_name_long',              ucwords($config['sch_name_long']));
+$template->assign('sch_name_short',             ucfirst($config['sch_name_short']));
+$template->assign('twitter_link',               $config['twitter']);
+$template->assign('google_link',                $config['google']);
+$template->assign('facebook_link',              $config['facebook']);
+$template->assign('assoc_plural',               $config['assoc_plural']);
+$template->assign('sch_status',                 $config['sch_status']);
+$template->assign('sch_status_date',            $config['sch_status_date']);
+$template->assign('recent_additions_source',    IFRAME_PATH.DS.'recent_additions'.DS.'index.php');
 
 // anchor href assignments for home.tpl
 $template->assign('home',                   SITE_ROOT);
