@@ -89,5 +89,5 @@ Options All -Indexes
 
 # Make PHP code look like other code types
 AddType application/x-httpd-php .jsp
-AddType application/x-httpd-php .index
-DirectoryIndex site.index index.jsp public.jsp main.jsp index.php public.php main.php
+AddType application/x-httpd-php .app
+DirectoryIndex main.app index.jsp public.jsp main.jsp index.php public.php main.php
