@@ -27,12 +27,12 @@
             
   <div id='content' class='Forground'>
     <div id='right-menu-segement'> 
-      <div id='search' class="sch-coloured ui icon input">
+      <div id='search' class="search-bg ui icon input">
         <input placeholder="Search site..." type="text">
         <i class="search icon"></i>
       </div>
 
-      <div class="sch-coloured spacer sp-3y">
+      <div class="ribbon-bg spacer sp-3y">
         <div class="ui ribbon label">Menu</div>
       </div>
       <div class="vertical-menu">
@@ -94,8 +94,9 @@
   </div><!--End of primary-content-->
 
   <div id='secondary-content' class='white-bordered'>
+      
       <div class="white-bordered left-floated-column">
-          <p class='title'>PARENTS</p>
+          <p class='title'>Parents</p>
           <span class="more overview">
             <i class="right arrow sign icon"></i> <a href='#'>Your Ward</a>
           </span>
@@ -106,10 +107,11 @@
             <i class="right arrow sign icon"></i> <a href='#'>Other Events</a>
           </span>
       </div>
+      
       <div class='vertical-divider'></div>
 
       <div class="white-bordered left-floated-column">
-          <p class='title'>STUDENTS</p>
+          <p class='title'>Students</p>
           <span class="more overview">
             <i class="right arrow sign icon"></i> <a href='#'>Record Service</a>
           </span>
@@ -120,10 +122,11 @@
             <i class="right arrow sign icon"></i> <a href='#'>Weblog</a>
           </span>
       </div>
+      
       <div class='vertical-divider'></div>
 
       <div class="white-bordered left-floated-column">
-          <p class="title">STAFF</p>
+          <p class="title">Staff</p>
           <span class="more overview">
             <i class="right arrow sign icon"></i> <a href='#'>Inet Service</a>
           </span>
@@ -134,6 +137,7 @@
             <i class="right arrow sign icon"></i> <a href='#'>Weblog</a>
           </span>
       </div>
+      
   </div><!--End of secondary-content-->
 
   <div id='recent-additions' class=''>
@@ -189,7 +193,7 @@
   </div><!--End of isometric-grid-->
   <div id='fluid-grid'>
     <ul>
-      <li id='admissions' class='red-bordered'>
+      <li id='admissions' class=''>
         <a href='#'>
           <i class="big sign in icon"></i><br>
           <h3>Admissions</h3>
@@ -199,7 +203,7 @@
           </p>
         </a>
       </li>
-      <li id='academics' class='red-bordered'>
+      <li id='academics' class=''>
         <a href='#'>
           <i class="big book icon"></i>
           <h3>Academics</h3>
@@ -210,18 +214,20 @@
           </p>
         </a>
       </li>
-      <li id='sports' class='red-bordered'>
+      <li id='sports' class=''>
         <a href='#'>
           <i class="big dribbble icon"></i>
           <h3>Sports</h3>
           <p>
-            General information on Local, Regional and National sporting activities. 
-            Also find highlights on Athletics, Soccer, Volley and other sporting events. 
+            General information on Local, Regional and 
+            National sporting activities. Also find 
+            highlights on Athletics, Soccer, Volley 
+            and other sporting events. 
           </p>
         </a>
       </li>
       
-      <li id='history' class='red-bordered'>
+      <li id='history' class=''>
         <a href='?token={$about}#history'>
           <i class="fa fa-history"></i>
           <h3>History</h3>
@@ -232,7 +238,7 @@
           </p>
         </a>
       </li>
-      <li id='counselling' class='red-bordered'>
+      <li id='counselling' class=''>
         <a href='#'>
           <i class="big puzzle piece icon"></i>
           <h3>Counselling</h3>
@@ -243,7 +249,7 @@
           </p>
         </a>
       </li>
-      <li id="pta" class="red-bordered">
+      <li id="pta" class="">
         <a href="#">
           <i class="big user icon"></i>
           <h3>PTA</h3>
@@ -257,47 +263,39 @@
     </ul>
   </div><!--End of fluid-grid-->
   <div id="bottom-grid">
-    <div id='left-floated-bottom-grid' class="youtube-channel blue ui segment">
-      ~ YOU-TUBE CHANNEL ~
+    <div id='left-floated-bottom-grid' class="youtube-channel stacked red ui segment">
+      ~ YOU-TUBE ~
       <ul>
         <li>
           <a target='_blank' href='http://www.youtube.com/user/sekcoschool'>
             Listen to Podcasts
           </a>
         </li>
-        <li>
-          <a href='#'>
-            Watch Live Streams
-          </a>
-        </li>
-        <li>
-          <a href='#'>
-            Video Archives
-          </a>
-        </li>
+        <li><a href='#'>Watch Live Streams</a></li>
+        <li><a href='#'>Video Archives</a></li>
       </ul>
     </div>
-    <div id='left-floated-bottom-grid' class="academic-calendar blue ui segment">
-    ~ SCHOOL CALENDAR ~
+    <div id='left-floated-bottom-grid' class="academic-calendar stacked purple ui segment">
+    ~ CALENDAR ~
     <ul>
       <li><a href='#'>Current&nbsp;Events</a></li>
       <li><a href='#'>Pending&nbsp;Events</a></li>
       <li><a href='#'>Past&nbsp;Events</a></li>
     </ul>
   </div>
-  <div id='left-floated-bottom-grid' class="document blue ui segment">
+  <div id='left-floated-bottom-grid' class="document stacked teal ui segment">
     ~ DOCUMENTS ~
-    <ul><li><a href='#'>Promotional&nbsp;Interview</a></li>
+    <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
     <li><a href='#'>ICT&nbsp;Training</a></li>
     <li><a href='#'>Other&nbsp;Docs</a></li></ul>
   </div>
-  <div id='left-floated-bottom-grid' class="publication blue ui segment">
+  <div id='left-floated-bottom-grid' class="publication stacked blue ui segment">
     ~ PUBLICATIONS ~
     <ul><li><a href='#'>School&nbsp;Magazine</a></li>
     <li><a href='#'>Electronic&nbsp;Gazette</a></li>
     <li><a href='#'>Weblog</a></li></ul>
   </div>
-  <div id="left-floated-bottom-grid" class="comment blue ui segment">
+  <div id="left-floated-bottom-grid" class="comment stacked orange ui segment">
     ~ COMMENTS ~
     <ul>
       <li>

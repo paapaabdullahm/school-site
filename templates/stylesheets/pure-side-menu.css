@@ -137,9 +137,9 @@ The content `<div>` is where all your content goes.
 }
 .content-subhead {
     font-family: serif, sans-serif, verdana; font-weight: 400;
-    color: rgb(31,141,214);
+    color: #D52978;
     margin-bottom: 0;
-    text-shadow: 1px 0px rgb(31,141,214);
+    text-shadow: 1px 0px #D52978;
 }
 
 
