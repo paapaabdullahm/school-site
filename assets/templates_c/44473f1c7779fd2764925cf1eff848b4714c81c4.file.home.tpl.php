@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-07-04 14:56:02
+<?php /* Smarty version Smarty-3.1.18, created on 2014-07-05 06:07:36
          compiled from "templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17648599955390c92e2480d0-87899095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '44473f1c7779fd2764925cf1eff848b4714c81c4' => 
     array (
       0 => 'templates/home.tpl',
-      1 => 1404478554,
+      1 => 1404533248,
       2 => 'file',
     ),
   ),
@@ -283,6 +283,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </a>
       </li>
       
+      <div class='right square'></div>
+      <div class='left square'></div>
+      
       <li id='history' class=''>
         <a href='?token=<?php echo $_smarty_tpl->tpl_vars['about']->value;?>
 #history'>
@@ -320,7 +323,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </ul>
   </div><!--End of fluid-grid-->
   <div id="bottom-grid">
-    <div id='left-floated-bottom-grid' class="youtube-channel stacked red ui segment">
+    <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
       ~ YOU-TUBE ~
       <ul>
         <li>
@@ -332,38 +335,38 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <li><a href='#'>Video Archives</a></li>
       </ul>
     </div>
-    <div id='left-floated-bottom-grid' class="academic-calendar stacked purple ui segment">
-    ~ CALENDAR ~
-    <ul>
-      <li><a href='#'>Current&nbsp;Events</a></li>
-      <li><a href='#'>Pending&nbsp;Events</a></li>
-      <li><a href='#'>Past&nbsp;Events</a></li>
-    </ul>
-  </div>
-  <div id='left-floated-bottom-grid' class="document stacked teal ui segment">
-    ~ DOCUMENTS ~
-    <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
-    <li><a href='#'>ICT&nbsp;Training</a></li>
-    <li><a href='#'>Other&nbsp;Docs</a></li></ul>
-  </div>
-  <div id='left-floated-bottom-grid' class="publication stacked blue ui segment">
-    ~ PUBLICATIONS ~
-    <ul><li><a href='#'>School&nbsp;Magazine</a></li>
-    <li><a href='#'>Electronic&nbsp;Gazette</a></li>
-    <li><a href='#'>Weblog</a></li></ul>
-  </div>
-  <div id="left-floated-bottom-grid" class="comment stacked orange ui segment">
-    ~ COMMENTS ~
-    <ul>
-      <li>
-        <a href='#'>
-          Got&nbsp;suggestions&nbsp;that 
-          can&nbsp;improve&nbsp;us?&nbsp;Just 
-          send&nbsp;us&nbsp;a&nbsp;Comment.
-        </a>
-      </li>
-    </ul>
-  </div>
+    <div id='left-floated-bottom-grid' class="academic-calendar stacked ui segment">
+      ~ CALENDAR ~
+      <ul>
+        <li><a href='#'>Current&nbsp;Events</a></li>
+        <li><a href='#'>Pending&nbsp;Events</a></li>
+        <li><a href='#'>Past&nbsp;Events</a></li>
+      </ul>
+    </div>
+    <div id='left-floated-bottom-grid' class="document stacked ui segment">
+      ~ DOCUMENTS ~
+      <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
+      <li><a href='#'>ICT&nbsp;Training</a></li>
+      <li><a href='#'>Other&nbsp;Docs</a></li></ul>
+    </div>
+    <div id='left-floated-bottom-grid' class="publication stacked ui segment">
+      ~ PUBLICATIONS ~
+      <ul><li><a href='#'>School&nbsp;Magazine</a></li>
+      <li><a href='#'>Electronic&nbsp;Gazette</a></li>
+      <li><a href='#'>Weblog</a></li></ul>
+    </div>
+    <div id="left-floated-bottom-grid" class="comment stacked ui segment">
+      ~ COMMENTS ~
+      <ul>
+        <li>
+          <a href='#'>
+            Got&nbsp;suggestions&nbsp;that 
+            can&nbsp;improve&nbsp;us?&nbsp;Just 
+            send&nbsp;us&nbsp;a&nbsp;Comment.
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
   </div><!--End of forground content-->
 	

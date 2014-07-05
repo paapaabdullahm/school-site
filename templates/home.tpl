@@ -227,6 +227,9 @@
         </a>
       </li>
       
+      <div class='right square'></div>
+      <div class='left square'></div>
+      
       <li id='history' class=''>
         <a href='?token={$about}#history'>
           <i class="fa fa-history"></i>
@@ -263,7 +266,7 @@
     </ul>
   </div><!--End of fluid-grid-->
   <div id="bottom-grid">
-    <div id='left-floated-bottom-grid' class="youtube-channel stacked red ui segment">
+    <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
       ~ YOU-TUBE ~
       <ul>
         <li>
@@ -275,38 +278,38 @@
         <li><a href='#'>Video Archives</a></li>
       </ul>
     </div>
-    <div id='left-floated-bottom-grid' class="academic-calendar stacked purple ui segment">
-    ~ CALENDAR ~
-    <ul>
-      <li><a href='#'>Current&nbsp;Events</a></li>
-      <li><a href='#'>Pending&nbsp;Events</a></li>
-      <li><a href='#'>Past&nbsp;Events</a></li>
-    </ul>
-  </div>
-  <div id='left-floated-bottom-grid' class="document stacked teal ui segment">
-    ~ DOCUMENTS ~
-    <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
-    <li><a href='#'>ICT&nbsp;Training</a></li>
-    <li><a href='#'>Other&nbsp;Docs</a></li></ul>
-  </div>
-  <div id='left-floated-bottom-grid' class="publication stacked blue ui segment">
-    ~ PUBLICATIONS ~
-    <ul><li><a href='#'>School&nbsp;Magazine</a></li>
-    <li><a href='#'>Electronic&nbsp;Gazette</a></li>
-    <li><a href='#'>Weblog</a></li></ul>
-  </div>
-  <div id="left-floated-bottom-grid" class="comment stacked orange ui segment">
-    ~ COMMENTS ~
-    <ul>
-      <li>
-        <a href='#'>
-          Got&nbsp;suggestions&nbsp;that 
-          can&nbsp;improve&nbsp;us?&nbsp;Just 
-          send&nbsp;us&nbsp;a&nbsp;Comment.
-        </a>
-      </li>
-    </ul>
-  </div>
+    <div id='left-floated-bottom-grid' class="academic-calendar stacked ui segment">
+      ~ CALENDAR ~
+      <ul>
+        <li><a href='#'>Current&nbsp;Events</a></li>
+        <li><a href='#'>Pending&nbsp;Events</a></li>
+        <li><a href='#'>Past&nbsp;Events</a></li>
+      </ul>
+    </div>
+    <div id='left-floated-bottom-grid' class="document stacked ui segment">
+      ~ DOCUMENTS ~
+      <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
+      <li><a href='#'>ICT&nbsp;Training</a></li>
+      <li><a href='#'>Other&nbsp;Docs</a></li></ul>
+    </div>
+    <div id='left-floated-bottom-grid' class="publication stacked ui segment">
+      ~ PUBLICATIONS ~
+      <ul><li><a href='#'>School&nbsp;Magazine</a></li>
+      <li><a href='#'>Electronic&nbsp;Gazette</a></li>
+      <li><a href='#'>Weblog</a></li></ul>
+    </div>
+    <div id="left-floated-bottom-grid" class="comment stacked ui segment">
+      ~ COMMENTS ~
+      <ul>
+        <li>
+          <a href='#'>
+            Got&nbsp;suggestions&nbsp;that 
+            can&nbsp;improve&nbsp;us?&nbsp;Just 
+            send&nbsp;us&nbsp;a&nbsp;Comment.
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
   </div><!--End of forground content-->
 	

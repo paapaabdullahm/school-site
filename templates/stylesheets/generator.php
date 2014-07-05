@@ -625,7 +625,6 @@ input:-ms-input-placeholder {
   margin: 15px 0 0 15px;
   min-height: 461px; height: 461px;
   min-width: 560px; width: 560px;
-  border: 1px solid red;
 }
 /*
 **************** PRIMARY CONTENT ************************************************************
@@ -659,37 +658,36 @@ input:-ms-input-placeholder {
 **************** SECONDARY CONTENT ************************
 */
 #secondary-content {
-  margin: 16px 0 36px 0;
-  height: 100px;
-  width: 99%;
-  border: 1px solid green;
+  margin: 16px 0 21px 0;
+  height: 115px;
+  width: 100%;
 }
   .left-floated-column {
-    float: left; left: 1px;
+    float: left; left: 0;
     position: relative; 
     text-align:left;
-    width: 27%;
-    margin-left: 1.5em;
+    width: 123px;
+    margin-left: 5%;
+    margin-right: 5%;
     height: 98%;
   }
     .left-floated-column P.title {
       width: 120px;
       display: inline-block;
-      margin: 0.4em 0.5em 0.2em -1.5em;
-      padding-left: 38px;
+      margin: 0em auto 0em auto;
+      padding: 0.1em 0em 0em 0em;
       font-weight: bold; font-size: 18px;
       color: #D52978;
       line-height: 33px;
       text-rendering: optimizelegibility;
-      border: 1px solid rgba(200,200,200,1);
     }
     .left-floated-column span.overview  {
       width: 120px;
       height: auto;
       display: inline-block;
-      padding: 0.1em 0em 0em 0em; margin: 0em 0.95em;
+      margin: 0em auto 0.2em auto;
+      padding: 0.1em 0em 0em 0em;
       font-family: sans-serif, verdana; font-size: 13px; font-weight: 400;
-      border: 1px solid rgba(200,200,200,1);
     }
     .left-floated-column span.more i  {
       margin-left: 0;
@@ -708,9 +706,9 @@ input:-ms-input-placeholder {
     float: left;
     position: relative;
     width: 1px;
-    height: 90%;
+    height: 70%;
     margin-top: 1em;
-
+    margin-left: 4px;
     background: rgba(255,255,255,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(150,150,150,1) 50%, rgba(255,255,255,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(229,229,229,1)), color-stop(100%, rgba(255,255,255,1)));
@@ -926,7 +924,7 @@ input:-ms-input-placeholder {
       height: 18px;
       padding-top: 2px;
       font-family: sans-serif, verdana; font-size: 18px; font-weight: 400;
-      color: rgba(255,255,255,1);
+      color: rgba(0,0,255,0.7);
       border-left: 1px solid rgba(255,255,255,1);
     }
     #sch-stats .sch-status .content .date {
@@ -1039,6 +1037,9 @@ input:-ms-input-placeholder {
     #fluid-grid a {
       color: rgb(0,110,205);
     }
+    #fluid-grid a p:hover {
+      text-decoration: underline;
+    }
     
     #fluid-grid i {
       /*color: blue;*/
@@ -1074,6 +1075,20 @@ input:-ms-input-placeholder {
       text-align: middle;
       margin: 0;
       padding: 0;
+    }
+    
+    #fluid-grid .square  {
+      width: 30px; height: 30px;
+      border: 1px solid rgb(250,252,253);
+      background: rgb(250,252,253);
+    }
+    
+    #fluid-grid .right  {
+      position: relative; top: 240px; right: -100px;
+    }
+    
+    #fluid-grid .left  {
+      position: relative; top: 210px; left: -138px;
     }
 					
 #footer {
