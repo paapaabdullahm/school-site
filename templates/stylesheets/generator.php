@@ -293,7 +293,7 @@ a, a:hover, a:active {
 *******************************************************
 */		
 #content {
-  min-height:1326px; height:1326px;
+  min-height:1346px; height:1346px;
   background-color: #fefefe; 
   -moz-background-clip: padding;     
   -webkit-background-clip: padding;  
@@ -542,6 +542,30 @@ input:-ms-input-placeholder {
 /*
 **************** BOTTOM ATTACHED LABELS ********************************
 */
+#line-devider.h-devider  {
+      min-width: 745px; width: 745px; height: 1px;
+      background: rgba(0,0,0,0.1);
+      margin: 25px 17px 18px 17px;
+      float: left;
+    }
+    
+    #line-devider .cleared {
+      width: 30px; height: 31px;
+      border: 3px solid white;
+      border-radius: 19px;
+      background: white;
+      position: relative; top: -18px;
+      
+    }
+    #line-devider .rounded {
+      width: 24px; height: 25px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 13px;
+      position: relative; top: 2px;
+      
+    }
+    #line-devider i {margin: 5px 0 0 0; }
+
 #bottom-grid { 
   float: left;  
   margin: 8px 15px 15px 15px;

@@ -265,6 +265,13 @@
       </li>
     </ul>
   </div><!--End of fluid-grid-->
+  <div id="line-devider" class="h-devider">
+    <div class="cleared">
+      <div class="rounded">
+        <i class="ui heart icon"></i>
+      </div>
+    </div>
+  </div>
   <div id="bottom-grid">
     <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
       ~ YOU-TUBE ~

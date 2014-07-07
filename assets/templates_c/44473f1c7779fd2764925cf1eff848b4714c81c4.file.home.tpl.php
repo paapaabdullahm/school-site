@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-07-05 06:07:36
+<?php /* Smarty version Smarty-3.1.18, created on 2014-07-07 20:33:23
          compiled from "templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17648599955390c92e2480d0-87899095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '44473f1c7779fd2764925cf1eff848b4714c81c4' => 
     array (
       0 => 'templates/home.tpl',
-      1 => 1404533248,
+      1 => 1404757964,
       2 => 'file',
     ),
   ),
@@ -322,6 +322,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </li>
     </ul>
   </div><!--End of fluid-grid-->
+  <div id="line-devider" class="h-devider">
+    <div class="cleared">
+      <div class="rounded">
+        <i class="ui heart icon"></i>
+      </div>
+    </div>
+  </div>
   <div id="bottom-grid">
     <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
       ~ YOU-TUBE ~
