@@ -963,7 +963,7 @@ input:-ms-input-placeholder {
   height: 548px;
   margin: 8px 15px 0 15px;
   /*background: rgba(72,158,231,0.3);*/ 
-  background: rgba(238,246,252,0.2); 
+  background: rgba(238,246,252,1); 
   border: 1px solid rgb(229,229,229);
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1079,8 +1079,9 @@ input:-ms-input-placeholder {
     
     #fluid-grid .square  {
       width: 30px; height: 30px;
-      border: 1px solid rgb(250,252,253);
-      background: rgb(250,252,253);
+      border: 1px solid rgba(238,246,252,1);
+      background: rgba(238,246,252,1);
+      border-radius: 15px;
     }
     
     #fluid-grid .right  {
