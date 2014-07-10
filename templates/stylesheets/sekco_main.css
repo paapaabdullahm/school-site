@@ -292,15 +292,12 @@ a, a:hover, a:active {
 *******************************************************
 */		
 #content {
-  min-height:1326px; height:1326px;
-  background-color: #fefefe; 
+  min-height:1490px; height:1490px;
+  background-color: #ffffff; 
   -moz-background-clip: padding;     
   -webkit-background-clip: padding;  
   background-clip: padding-box;     
   border: 15px solid rgba(0,0,0,0.2);
-  border-radius: 25px;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
 }
 /*
 ***************************************************
@@ -322,9 +319,6 @@ a, a:hover, a:active {
   background: rgb(107,176,235);
   min-width: 163px; width: 163px;
   margin-left: 16px;
-  border-radius: 0 5px 0 0;
-  -moz-border-radius: 0 5px 0 0;
-  -webkit-border-radius: 0 5px 0 0;
 }
 
 #search.ui.icon.input input {
@@ -439,13 +433,12 @@ input:-ms-input-placeholder {
   margin: 0em 0em 1em 1em;
   left: -2.15rem; top: -0.1rem;
   padding: 0.3rem 3rem 0.2rem 1.8rem;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 0px 0px 0px;
   border-color: rgba(0, 0, 0, 0.15);
-  background-color: rgb(244,195,4);
-  font-family: 'raleway', sans-serif, verdana; font-size: 18px; font-weight: 300;
+  background-color: rgb(243,156,18);
+  font-family: 'raleway', sans-serif, verdana; font-size: 18px; font-weight: 500;
   font-style: normal;
-  color: rgb(59,88,158);
-  text-shadow: 1px 1px 1px rgba(255,255,255,1);
+  color: rgb(255,255,255);
   -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.7);
   -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.7);
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.7);
@@ -461,9 +454,6 @@ input:-ms-input-placeholder {
   font-family: sans-serif, verdana; font-size: 13px; font-weight: 400;
   color: #777;
   background: rgba(72,158,231,0.8);
-  border-radius: 0 0 5px 0;
-  -moz-border-radius: 0 0 5px 0;
-  -webkit-border-radius: 0 0 5px 0;
 }	
   .vertical-menu .record-service,
   .vertical-menu .elearning-service,
@@ -533,111 +523,8 @@ input:-ms-input-placeholder {
     -webkit-box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.5);
     box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.5);
-    border-radius: 0 0 5px 0;
-    -moz-border-radius: 0 0 5px 0;
-    -webkit-border-radius: 0 0 5px 0;
   }
-				
-/*
-**************** BOTTOM ATTACHED LABELS ********************************
-*/
-#line-devider.h-devider  {
-      min-width: 745px; width: 745px; height: 1px;
-      background: rgba(0,0,0,0.1);
-      margin: 25px 17px 18px 17px;
-      float: left;
-    }
-    
-    #line-devider .cleared {
-      width: 30px; height: 31px;
-      border: 3px solid white;
-      border-radius: 19px;
-      background: white;
-      position: relative; top: -18px;
-      
-    }
-    #line-devider .rounded {
-      width: 24px; height: 25px;
-      border: 1px solid rgba(0,0,0,0.1);
-      border-radius: 13px;
-      position: relative; top: 2px;
-      
-    }
-    #line-devider i {margin: 5px 0 0 0;}
-
-#bottom-grid { 
-  float: left;  
-  margin: 8px 15px 15px 15px;
-  min-width: 749px; width: 749px;
-  border: 1px solid rgba(0,0,0,0);
-}
-#left-floated-bottom-grid { 
-  float: left;
-  padding-right:0;
-  padding-left:0;
-  margin:0;
-  min-height: 101px; height: 101px;
-  min-width: 135px; width: 135px;
-  font-family: sans-serif, verdana; font-size: 11px; font-weight: 400;
-  color: rgba(0,0,0,1);
-  text-rendering: optimizelegibility;
-  /*border: 1px solid black;*/
-}
-#channel-header-bg { color: rgb(99,108,118); font-weight: bold;}
-
-#left-floated-bottom-grid.youtube-channel,
-#left-floated-bottom-grid.academic-calendar,
-#left-floated-bottom-grid.document,
-#left-floated-bottom-grid.publication{ 
-  margin-right: 1.63em;
-}
- 
-#left-floated-bottom-grid.comment {
-  
-}
-  
-
-  .youtube-channel i {color: red;}
-  .academic-calendar i {color: purple;}
-  .document i {color: orange;}
-  .publication i {color: brown;}
-  .comment i {color: teal;}
-
-  
-  .youtube-channel ul,
-  .academic-calendar ul,
-  .document ul,
-  .publication ul,
-  .comment ul { 
-    padding: 0.2em; margin: 0.2em;
-    /*background: rgba(255,255,255,0.25);
-    height: 66px;*/
-  }	
-  
-  .youtube-channel ul li,
-  .academic-calendar ul li,
-  .document ul li,
-  .publication ul li,
-  .comment ul li{
-    list-style: none outside none;
-  }
-  
-  .youtube-channel ul li a:hover,
-  .academic-calendar ul li a:hover,
-  .document ul li a:hover,
-  .publication ul li a:hover,
-  .comment ul li a:hover{
-    text-decoration: underline;
-  }
-  
-  .youtube-channel ul li a,
-  .academic-calendar ul li a,
-  .document ul li a,
-  .publication ul li a,
-  .comment ul li a{
-    color: rgb(37,138,175);
-  }
-		
+					
 /*
 *****************************************
 **************** LEFT *******************
@@ -653,12 +540,11 @@ input:-ms-input-placeholder {
 **************** PRIMARY CONTENT ************************************************************
 */
 #primary-content {
-  background: url() no-repeat scroll 0% 0% / 100% auto rgb(21,150,159);
+  background: url() no-repeat scroll 0% 0% / 100% auto rgb(255,255,255);
   height: 212px;
   width: 550px;
   position: relative;
-  border:5px solid black;
-  border-radius: 6px;
+  border:5px solid rgb(44,62,80);
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
   box-shadow:  0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -755,9 +641,6 @@ input:-ms-input-placeholder {
   text-align: left;
   height: 96px;
   border-bottom: 1px solid rgba(78,110,241,0.5);
-  border-radius: 0 0 0 5px;
-  -moz-border-radius: 0 0 0 5px;
-  -webkit-border-radius: 0 0 0 5px;
   /*width: 550px;*/
 
 }
@@ -778,9 +661,6 @@ input:-ms-input-placeholder {
   font-style: normal;
   color: rgba(255,255,255,0.9);
   border-bottom: none;
-  border-radius: 5px 0 0 0;
-  -moz-border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
 }
 #recent-additions a { 
   float: right; padding: 0.2em 0em; margin: 0.14em 0em 0em 0em;
@@ -796,13 +676,10 @@ input:-ms-input-placeholder {
   float: left;
   height:156px;
   width: 748px;
-  margin: 8px 15px 0 15px;
+  margin: 16px 15px 0 15px;
   /*border-top: 1px solid #ffffff;*/
   background: url('http://sekco.dev/templates/images/sekco_isometric_grid.png');
   border: 1px solid rgb(229,229,229);
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
 }
 #sch-stats {
   height:65px;
@@ -817,7 +694,7 @@ input:-ms-input-placeholder {
   width: 167px;
   height: 82px;
   border: 1px solid rgb(211,211,211);
-  background: rgba(255,84,84,1);
+  background: rgb(44,62,80);
 }
     #sch-stats .stu-pop .icon {
       float: left;
@@ -854,7 +731,7 @@ input:-ms-input-placeholder {
   width: 167px;
   height: 82px;
   border: 1px solid rgb(211,211,211);
-  background: rgba(103,194,239,1);
+  background: rgb(52,152,219);
 }
     #sch-stats .staff-pop .icon {
       float: left;
@@ -891,7 +768,7 @@ input:-ms-input-placeholder {
   width: 167px;
   height: 82px;
   border: 1px solid rgb(211,211,211);
-  background: rgba(250,187,61,1);
+  background: rgb(243,156,18);
 }
     #sch-stats .total-dept .icon {
       float: left;
@@ -928,7 +805,7 @@ input:-ms-input-placeholder {
   width: 176px;
   height: 82px;
   border: 1px solid rgb(211,211,211);
-  background: rgba(121,196,71,1);
+  background: rgb(24,188,156);
 }
     #sch-stats .sch-status .icon {
       float: left;
@@ -983,72 +860,45 @@ input:-ms-input-placeholder {
 #fluid-grid {
   float: left;  
   width: 749px;
-  height: 548px;
-  margin: 8px 15px 0 15px;
-  /*background: rgba(72,158,231,0.3);*/ 
-  background: rgba(238,246,252,1); 
+  height: 566px;
+  margin: 16px 15px 0 15px; 
   border: 1px solid rgb(229,229,229);
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  background: rgb(234,241,241);
   box-sizing: border-box;
 }
     #fluid-grid ul li {
       float: left; 
       display: block; 
-      width: 200px; 
-      height: 219px; 
+      /*width: 200px; 
+      height: 219px;*/ 
+      width: 189.5px; 
+      height: 219px;
       line-height: 22px;
       list-style: none outside none;
       padding: 1.15em;
+      background: rgb(255,255,255);
     }
+    #fluid-grid ul li#admissions,
+    #fluid-grid ul li#academics,
+    #fluid-grid ul li#sports,
+    #fluid-grid ul li#history,
+    #fluid-grid ul li#counselling,
+    #fluid-grid ul li#pta{ 
+      border: 1px solid rgba(44,62,80,0.1);
     
-    #fluid-grid ul li#history { 
-      border-top: 1px solid rgb(229,229,229);
-      border-right: 1px solid rgb(229,229,229);
-      border-bottom: 1px none;
-      border-left: 1px none;
-    } 
-    #fluid-grid ul li#counselling { 
-      border-top: 1px solid rgb(229,229,229);
-      border-right: 1px solid rgb(229,229,229);
-      border-bottom: 1px none;
-      border-left: 1px solid rgb(229,229,229);
-    }
-    #fluid-grid ul li#academics { 
-      border-top: 1px none;
-      border-right: 1px solid rgb(229,229,229);
-      border-bottom: 1px solid rgb(229,229,229);
-      border-left: 1px solid rgb(229,229,229);
-    }
-    #fluid-grid ul li#admissions { 
-      border-top: 1px none;
-      border-right: 1px solid rgb(229,229,229);
-      border-bottom: 1px solid rgb(229,229,229);
-      border-left: 1px none;
-    }
-    #fluid-grid ul li#sports { 
-      border-top: 1px none;
-      border-right: 1px none;
-      border-bottom: 1px solid rgb(229,229,229);
-      border-left: 1px solid rgb(229,229,229);
-    }
-    #fluid-grid ul li#pta { 
-      border-top: 1px solid rgb(229,229,229);
-      border-right: 1px none;
-      border-bottom: 1px none;
-      border-left: 1px solid rgb(229,229,229);
     }
     
     #fluid-grid ul li#history, 
     #fluid-grid ul li#counselling,
     #fluid-grid ul li#academics,
-    #fluid-grid ul li#admissions { margin: 0 1.35em -1px -1.4em;
+    #fluid-grid ul li#admissions { 
+      margin: 0 2.5em 1em -1.5em;
     }
     #fluid-grid ul li#sports,
-    #fluid-grid ul li#pta { margin: 0 0 -1px -1.4em;  
+    #fluid-grid ul li#pta { 
+      margin: 0 0 1em -1.5em;
     }
-    
+
     #fluid-grid ul li#history i {height: 46px; width: 58px;}
     #fluid-grid ul li#history a i { padding-top: 13px; font-size: 2em;}
     #fluid-grid  ul li#counselling a i { padding: 13px 19px; }
@@ -1058,7 +908,7 @@ input:-ms-input-placeholder {
     #fluid-grid ul li#pta a i { padding-top: 13px; }
 
     #fluid-grid a {
-      color: rgb(0,110,205);
+      color: rgb(52,152,219);
     }
     #fluid-grid a p:hover {
       text-decoration: underline;
@@ -1081,11 +931,10 @@ input:-ms-input-placeholder {
       -webkit-border-radius: 31px;
     }
     
-    #fluid-grid a h3 {
-      font-size: 18px;
+    #fluid-grid a h2 {
       font-weight: bold;
-      color: rgb(213,41,120);
-      line-height: 33px;
+      color: rgb(44,62,80);
+      line-height: 40px;
       text-align: middle;
       text-rendering: optimizelegibility;
       margin: 0;
@@ -1100,10 +949,10 @@ input:-ms-input-placeholder {
       padding: 0;
     }
     
-    #fluid-grid .square  {
+   /* #fluid-grid .square  {
       width: 30px; height: 30px;
-      border: 1px solid rgba(238,246,252,1);
-      background: rgba(238,246,252,1);
+      border: 1px solid rgb(236,240,241);
+      background: rgb(236,240,241) !important;
       border-radius: 15px;
     }
     
@@ -1113,7 +962,115 @@ input:-ms-input-placeholder {
     
     #fluid-grid .left  {
       position: relative; top: 210px; left: -138px;
+    }*/
+    
+/*
+**************** BOTTOM ATTACHED LABELS ********************************
+*/
+#line-devider.h-devider  {
+      min-width: 745px; width: 745px; height: 1px;
+      background: rgba(0,0,0,0.1);
+      margin: 25px 17px 16px 17px;
+      float: left;
     }
+    
+    #line-devider .cleared {
+      width: 30px; height: 31px;
+      border: 3px solid white;
+      border-radius: 19px;
+      background: white;
+      position: relative; top: -18px;
+      
+    }
+    #line-devider .rounded {
+      width: 24px; height: 25px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 13px;
+      position: relative; top: 2px;
+      
+    }
+    #line-devider i {margin: 5px 0 0 0; color: #444444; }
+
+#bottom-grid { 
+  float: left;  
+  margin: 8px 15px 15px 15px;
+  min-width: 749px; width: 749px;
+  border: 1px solid rgba(0,0,0,0);
+}
+#left-floated-bottom-grid { 
+  float: left;
+  padding-right:0;
+  padding-left:0;
+  margin:0;
+  min-height: 100%; height: 100%;
+  min-width: 135px; width: 135px;
+  font-family: sans-serif, verdana; font-size: 11px; font-weight: 400;
+  color: rgba(0,0,0,1);
+  text-rendering: optimizelegibility;
+  /*border: 1px solid black;*/
+}
+#channel-header-bg { color: rgb(99,108,118); font-weight: bold;}
+
+#left-floated-bottom-grid.youtube-channel,
+#left-floated-bottom-grid.academic-calendar,
+#left-floated-bottom-grid.document,
+#left-floated-bottom-grid.publication{ 
+  margin-right: 1.63em;
+}
+ 
+#left-floated-bottom-grid.comment {
+  
+}
+  .youtube-channel i {color: red;}
+  .academic-calendar i {color: purple;}
+  .document i {color: orange;}
+  .publication i {color: brown;}
+  .comment i {color: teal;}
+
+  
+  .youtube-channel ul,
+  .academic-calendar ul,
+  .document ul,
+  .publication ul,
+  .comment ul { 
+    padding: 0.2em; margin: 0.2em;
+    /*background: rgba(255,255,255,0.25);
+    height: 66px;*/
+  }	
+  
+  .youtube-channel ul li,
+  .academic-calendar ul li,
+  .document ul li,
+  .publication ul li,
+  .comment ul li{
+    list-style: none outside none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding:1em 0 1em 0;
+  }
+  
+  .youtube-channel ul li a:hover,
+  .academic-calendar ul li a:hover,
+  .document ul li a:hover,
+  .publication ul li a:hover,
+  .comment ul li a:hover{
+    text-decoration: underline;
+  }
+  
+  .youtube-channel ul li a,
+  .academic-calendar ul li a,
+  .document ul li a,
+  .publication ul li a,
+  .comment ul li a{
+    color: #777777;
+  }
+	.youtube-channel h3,
+  .academic-calendar h3,
+  .document h3,
+  .publication h3,
+  .comment h3{
+    color: #444444;
+    font-weight: 500;
+  }
 					
 #footer {
   width:auto;

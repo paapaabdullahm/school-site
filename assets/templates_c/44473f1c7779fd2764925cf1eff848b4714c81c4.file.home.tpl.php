@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-07-07 20:33:23
+<?php /* Smarty version Smarty-3.1.18, created on 2014-07-09 19:49:41
          compiled from "templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17648599955390c92e2480d0-87899095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '44473f1c7779fd2764925cf1eff848b4714c81c4' => 
     array (
       0 => 'templates/home.tpl',
-      1 => 1404757964,
+      1 => 1404928173,
       2 => 'file',
     ),
   ),
@@ -138,11 +138,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
   <div id="primary-content">
     <div class="primary-content-link">
-      <a target="_blank" href="#">ePub</a>  | 
-      <a target="_blank" href="#">Audio</a> | 
-      <a target="_blank" href="#">mobi</a>  | 
-      <a target="_blank" href="#">PDF</a>
-      <br />
+     
     </div>
   </div><!--End of primary-content-->
 
@@ -252,7 +248,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <li id='admissions' class=''>
         <a href='#'>
           <i class="big sign in icon"></i><br>
-          <h3>Admissions</h3>
+          <h2>Admissions</h2>
           <p>
             Understand Sekondi College&#39;s Mission and Vision and decide if it 
             is the right choice for you. Also learn about the CSSPS school selection system.
@@ -262,7 +258,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <li id='academics' class=''>
         <a href='#'>
           <i class="big book icon"></i>
-          <h3>Academics</h3>
+          <h2>Academics</h2>
           <p>
             This section provides info on departments, and 
             programmes that are offered in the school. Others 
@@ -273,7 +269,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <li id='sports' class=''>
         <a href='#'>
           <i class="big dribbble icon"></i>
-          <h3>Sports</h3>
+          <h2>Sports</h2>
           <p>
             General information on Local, Regional and 
             National sporting activities. Also find 
@@ -283,14 +279,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </a>
       </li>
       
-      <div class='right square'></div>
-      <div class='left square'></div>
+      <!--div class='right square'><div></div></div>
+      <div class='left square'><div></div></div-->
       
       <li id='history' class=''>
         <a href='?token=<?php echo $_smarty_tpl->tpl_vars['about']->value;?>
 #history'>
           <i class="fa fa-history"></i>
-          <h3>History</h3>
+          <h2>History</h2>
           <p>
             An introduction to the history of 
             Sekondi College from the time it started
@@ -301,7 +297,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <li id='counselling' class=''>
         <a href='#'>
           <i class="big puzzle piece icon"></i>
-          <h3>Counselling</h3>
+          <h2>Counselling</h2>
           <p>
             This section provides invaluable counselling and 
             carrear guidance information for current and 
@@ -312,7 +308,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <li id="pta" class="">
         <a href="#">
           <i class="big user icon"></i>
-          <h3>PTA</h3>
+          <h2>PTA</h2>
           <p>
             This section provides info on Sekco PTA and its 
             activities over the years such as fundraising, housing 
@@ -331,7 +327,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </div>
   <div id="bottom-grid">
     <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
-      ~ YOU-TUBE ~
+      <h3>~ YOU-TUBE ~</h3>
       <ul>
         <li>
           <a target='_blank' href='http://www.youtube.com/user/sekcoschool'>
@@ -343,7 +339,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </ul>
     </div>
     <div id='left-floated-bottom-grid' class="academic-calendar stacked ui segment">
-      ~ CALENDAR ~
+      <h3>~ CALENDAR ~</h3>
       <ul>
         <li><a href='#'>Current&nbsp;Events</a></li>
         <li><a href='#'>Pending&nbsp;Events</a></li>
@@ -351,19 +347,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </ul>
     </div>
     <div id='left-floated-bottom-grid' class="document stacked ui segment">
-      ~ DOCUMENTS ~
+      <h3>~ DOCUMENTS ~</h3>
       <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
       <li><a href='#'>ICT&nbsp;Training</a></li>
       <li><a href='#'>Other&nbsp;Docs</a></li></ul>
     </div>
     <div id='left-floated-bottom-grid' class="publication stacked ui segment">
-      ~ PUBLICATIONS ~
+      <h3>~ PUBLICATIONS ~</h3>
       <ul><li><a href='#'>School&nbsp;Magazine</a></li>
       <li><a href='#'>Electronic&nbsp;Gazette</a></li>
       <li><a href='#'>Weblog</a></li></ul>
     </div>
     <div id="left-floated-bottom-grid" class="comment stacked ui segment">
-      ~ COMMENTS ~
+      <h3>~ COMMENTS ~</h3>
       <ul>
         <li>
           <a href='#'>
