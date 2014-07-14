@@ -5,7 +5,7 @@
 </head>
 <body>
   {include file='bg.inc.tpl'}
-  <center>
+  <center class="zoom">
   <div id='header' class='Forground'>
     <div class='sch-info'>
       <div class='sch-logo'></div>
@@ -148,8 +148,8 @@
             scrolling="no"
             marginheight="0" 
             marginwidth="0" 
-            width="550px" 
-            height="77px" 
+            width="650px" 
+            height="94px" 
             seamless>
     </iframe>
   </div><!--End of recent-additions-->
@@ -204,7 +204,7 @@
           <i class="big book icon"></i>
           <h2>Academics</h2>
           <p>
-            This section provides info on departments, and 
+            This section provides info on all departments, and 
             programmes that are offered in the school. Others 
             like performance stats, academic calendar, etc are also provided. 
           </p>
@@ -216,7 +216,7 @@
           <h2>Sports</h2>
           <p>
             General information on Local, Regional and 
-            National sporting activities. Also find 
+            National sporting events. Also find 
             highlights on Athletics, Soccer, Volley 
             and other sporting events. 
           </p>
@@ -253,7 +253,7 @@
           <i class="big user icon"></i>
           <h2>PTA</h2>
           <p>
-            This section provides info on Sekco PTA and its 
+            This section provides information on Sekco PTA and its 
             activities over the years such as fundraising, housing 
             projects, meetings and other useful infomation. 
           </p>
@@ -270,7 +270,7 @@
   </div>
   <div id="bottom-grid">
     <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
-      <h3>~ YOU-TUBE ~</h3>
+      <div class="title">~ YOU-TUBE ~</div>
       <ul>
         <li>
           <a target='_blank' href='http://www.youtube.com/user/sekcoschool'>
@@ -282,7 +282,7 @@
       </ul>
     </div>
     <div id='left-floated-bottom-grid' class="academic-calendar stacked ui segment">
-      <h3>~ CALENDAR ~</h3>
+      <div class="title">~ CALENDAR ~</div>
       <ul>
         <li><a href='#'>Current&nbsp;Events</a></li>
         <li><a href='#'>Pending&nbsp;Events</a></li>
@@ -290,19 +290,19 @@
       </ul>
     </div>
     <div id='left-floated-bottom-grid' class="document stacked ui segment">
-      <h3>~ DOCUMENTS ~</h3>
+      <div class="title">~ DOCUMENTS ~</div>
       <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
       <li><a href='#'>ICT&nbsp;Training</a></li>
       <li><a href='#'>Other&nbsp;Docs</a></li></ul>
     </div>
     <div id='left-floated-bottom-grid' class="publication stacked ui segment">
-      <h3>~ PUBLICATIONS ~</h3>
+      <div class="title">~ PUBLICATIONS ~</div>
       <ul><li><a href='#'>School&nbsp;Magazine</a></li>
       <li><a href='#'>Electronic&nbsp;Gazette</a></li>
       <li><a href='#'>Weblog</a></li></ul>
     </div>
     <div id="left-floated-bottom-grid" class="comment stacked ui segment">
-      <h3>~ COMMENTS ~</h3>
+      <div class="title">~ COMMENTS ~</div>
       <ul>
         <li>
           <a href='#'>

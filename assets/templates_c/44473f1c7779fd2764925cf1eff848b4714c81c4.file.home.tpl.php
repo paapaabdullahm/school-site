@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-07-09 19:49:41
+<?php /* Smarty version Smarty-3.1.18, created on 2014-07-14 05:51:56
          compiled from "templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17648599955390c92e2480d0-87899095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '44473f1c7779fd2764925cf1eff848b4714c81c4' => 
     array (
       0 => 'templates/home.tpl',
-      1 => 1404928173,
+      1 => 1405309910,
       2 => 'file',
     ),
   ),
@@ -46,7 +46,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body>
   <?php echo $_smarty_tpl->getSubTemplate ('bg.inc.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-  <center>
+  <center class="zoom">
   <div id='header' class='Forground'>
     <div class='sch-info'>
       <div class='sch-logo'></div>
@@ -202,8 +202,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             scrolling="no"
             marginheight="0" 
             marginwidth="0" 
-            width="550px" 
-            height="77px" 
+            width="650px" 
+            height="94px" 
             seamless>
     </iframe>
   </div><!--End of recent-additions-->
@@ -260,7 +260,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <i class="big book icon"></i>
           <h2>Academics</h2>
           <p>
-            This section provides info on departments, and 
+            This section provides info on all departments, and 
             programmes that are offered in the school. Others 
             like performance stats, academic calendar, etc are also provided. 
           </p>
@@ -272,7 +272,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <h2>Sports</h2>
           <p>
             General information on Local, Regional and 
-            National sporting activities. Also find 
+            National sporting events. Also find 
             highlights on Athletics, Soccer, Volley 
             and other sporting events. 
           </p>
@@ -310,7 +310,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <i class="big user icon"></i>
           <h2>PTA</h2>
           <p>
-            This section provides info on Sekco PTA and its 
+            This section provides information on Sekco PTA and its 
             activities over the years such as fundraising, housing 
             projects, meetings and other useful infomation. 
           </p>
@@ -327,7 +327,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </div>
   <div id="bottom-grid">
     <div id='left-floated-bottom-grid' class="youtube-channel stacked ui segment">
-      <h3>~ YOU-TUBE ~</h3>
+      <div class="title">~ YOU-TUBE ~</div>
       <ul>
         <li>
           <a target='_blank' href='http://www.youtube.com/user/sekcoschool'>
@@ -339,7 +339,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </ul>
     </div>
     <div id='left-floated-bottom-grid' class="academic-calendar stacked ui segment">
-      <h3>~ CALENDAR ~</h3>
+      <div class="title">~ CALENDAR ~</div>
       <ul>
         <li><a href='#'>Current&nbsp;Events</a></li>
         <li><a href='#'>Pending&nbsp;Events</a></li>
@@ -347,19 +347,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </ul>
     </div>
     <div id='left-floated-bottom-grid' class="document stacked ui segment">
-      <h3>~ DOCUMENTS ~</h3>
+      <div class="title">~ DOCUMENTS ~</div>
       <ul><li><a href='#'>Promotional<br>&nbsp;Interview GES</a></li>
       <li><a href='#'>ICT&nbsp;Training</a></li>
       <li><a href='#'>Other&nbsp;Docs</a></li></ul>
     </div>
     <div id='left-floated-bottom-grid' class="publication stacked ui segment">
-      <h3>~ PUBLICATIONS ~</h3>
+      <div class="title">~ PUBLICATIONS ~</div>
       <ul><li><a href='#'>School&nbsp;Magazine</a></li>
       <li><a href='#'>Electronic&nbsp;Gazette</a></li>
       <li><a href='#'>Weblog</a></li></ul>
     </div>
     <div id="left-floated-bottom-grid" class="comment stacked ui segment">
-      <h3>~ COMMENTS ~</h3>
+      <div class="title">~ COMMENTS ~</div>
       <ul>
         <li>
           <a href='#'>
