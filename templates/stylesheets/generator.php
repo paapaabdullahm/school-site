@@ -1,4 +1,4 @@
-<?php 
+<?php
 $output = " 
 /*
 **************** CSS RESET ***********************************
@@ -7,9 +7,9 @@ $output = "
 .zoom {
    transform-origin: 0% 0%;
    transform: scale(1.2);
-   -moz-transform: scale(1.2, 1.2); /* Moz-browsers */
-   zoom: 1.2; /* Other non-webkit browsers */
-   zoom: 120%; /* Webkit browsers */
+   -moz-transform: scale(1.2, 1.2);
+   zoom: 1.2;
+   zoom: 120%;
    margin-right:16.61%;
 }
 **/
@@ -27,7 +27,7 @@ a, a:hover, a:active {
 **************** CSS SPRITE 5PX SPACING TO THE RIGHT*****************************************
 */
 .sprite { 
-  background: {$config['img_sprite_file']}; no-repeat top left;  
+  background: {$config['img_sprite_file']} no-repeat top left;  
 }
 /*
 **************** SPACER, BORDERS, HEIGHT(up to 5em @ 0.2 precision), COLOURED BG ************
@@ -101,7 +101,7 @@ a, a:hover, a:active {
 */
 
 .sprite.country-flag-small { 
-  background-position: 0px 0px;
+  background-position: 0 0;
   display: inline-block;
   margin:0; padding:0;
   width: 10px; height: 10px;  
@@ -116,7 +116,7 @@ a, a:hover, a:active {
 }*/
 #call-us {
   margin-top: 0;
-  padding: 0em 10em 0em 0em;
+  padding: 0 10em 0 0;
   /*border: 1px solid blue;*/
   min-height: 20px; height: 20px;
   font-family: sans-serif, verdana; font-size: 8px; font-weight: 400;
@@ -129,7 +129,7 @@ a, a:hover, a:active {
 #record-service-registration-modal,
 #record-service-login-modal {
   background: rgba(72,158,231,0.9); 
-  border-radius: 0em; border: none; 
+  border-radius: 0; border: none; 
   color: #eee;
   font-family: sans-serif, verdana; 
   font-style: normal;
@@ -137,7 +137,7 @@ a, a:hover, a:active {
 }
 #record-service-registration-modal .button,
 #record-service-login-modal .button { 
-  border-radius: 0em; border: none; 
+  border-radius: 0; border: none; 
 
 }
 	
@@ -161,7 +161,7 @@ a, a:hover, a:active {
 #header {
   text-align: left;
   min-height:100px; height:100px;
-  background-color: none;
+  /*background-color: none;*/
   border: 1px solid rgba(0,0,0,0.7);
 }
 .sch-info {
@@ -956,7 +956,7 @@ input:-ms-input-placeholder {
       font-family: sans-serif, verdana; font-size: 20px; 
       font-weight: 400;
       line-height: 21px;
-      text-align: middle;
+      text-align: center;
       margin: 0;
       padding: 0;
       height: 172px;
@@ -1102,14 +1102,14 @@ input:-ms-input-placeholder {
 }
 		#footer a { color: #222; text-shadow: none;}
 		#footer a:hover { text-decoration: underline;}
-"; 
+";
 	$this_file  = __FILE__;
 	$last_css_modify_time = filemtime($this_file);
-	
+
 	if (!isset ($modified_css))
 	{
 		ob_start();
-		echo $output;	
+		echo $output;
 		$css_content = ob_get_contents();
 		ob_end_clean();
 		//@chmod(CSS_PATH.DS.$config['css_file'],0755);
@@ -1117,10 +1117,8 @@ input:-ms-input-placeholder {
    	$data_size = strlen($css_content);
    	fputs($writable_file,$css_content, $data_size);
    	fclose($writable_file);
- 	} 
- 	elseif (isset ($modified_css) && $modified_css < $last_css_modify_time) 
+ 	}
+ 	elseif (isset ($modified_css) && $modified_css < $last_css_modify_time)
  	{
  		unset ($_SESSION["modified_css"]);
  	}
-?>
-

@@ -1,42 +1,19 @@
 <?php
-$server = $_SERVER['SERVER_NAME'];
-$dev_domain = isset ($_GET['domain']) ? htmlentities($_GET['domain']) : "";
-
-if (!empty ($dev_domain)) {
-    $host = $dev_domain;
-    $config['debugging'] = true;
-} else {
-    $server_arr = explode ( ".", strtolower( $server ) );
-    if ( $server_arr[0] == 'www' || $server_arr[0] == 'dev' ) {
-        switch ( $server_arr[1] ) {
-            case 'ghmod': { 
-                $warn = _DomainQuerySetError; 
-            } break;
-            default: { 
-                $host = $server_arr[1]; 
-            } break;
-        }
-    } else {
-        $host = $server_arr[0]; 
-    }
-}
 
 // Site version 1.0
 defined('SCHOOL_SITE') ? null : define('SCHOOL_SITE', 10);
 
 // Database Constants
-defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
-defined('DB_USER')   ? null : define("DB_USER", "test1");
-defined('DB_PASS')   ? null : define("DB_PASS", "test1");
-defined('DB_NAME')   ? null : define("DB_NAME", "test1");
+defined('DB_SERVER') ? null : define("DB_SERVER", getenv('DB_HOST'));
+defined('DB_USER')   ? null : define("DB_USER", getenv('DB_USER'));
+defined('DB_PASS')   ? null : define("DB_PASS", getenv('DB_PASSWORD'));
+defined('DB_NAME')   ? null : define("DB_NAME", getenv('DB_DATABASE'));
 
 //Get current working directory
 defined('CWD') ? null : define('CWD', getcwd());
 
 // Define site root
-defined('SITE_ROOT') ? null : 
-isset($_SERVER['HTTPS']) ? define('SITE_ROOT', 'https://'.$_SERVER['SERVER_NAME']) : 
-define('SITE_ROOT', 'http://'.$_SERVER['SERVER_NAME']);
+defined('SITE_ROOT') ? null : define('SITE_ROOT', 'https://'.$_SERVER['SERVER_NAME']);
 
 // Define document root
 defined('DOC_ROOT') ? null : define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
@@ -58,9 +35,9 @@ defined('MOD_PATH')   ? null : define('MOD_PATH', 'modules');
 defined('TPL_PATH')   ? null : define('TPL_PATH',	'templates');
 
 // Define assets sub directory
-defined('CACHE_PATH')  ? null : define('CACHE_PATH', ASSET_PATH.DS.'cache');
-defined('LOG_PATH')	   ? null : define('LOG_PATH', ASSET_PATH.DS.'logs');
-defined('UPLOAD_PATH') ? null : define('UPLOAD_PATH', ASSET_PATH.DS.'uploads');
+defined('CACHE_PATH')   ? null : define('CACHE_PATH', ASSET_PATH.DS.'cache');
+defined('LOG_PATH')     ? null : define('LOG_PATH', ASSET_PATH.DS.'logs');
+defined('UPLOAD_PATH')  ? null : define('UPLOAD_PATH', ASSET_PATH.DS.'uploads');
 
 // Define public sub directory
 defined('IFRAME_PATH') ? null : define('IFRAME_PATH', TPL_PATH.DS.'iframes');
@@ -72,17 +49,19 @@ defined('IMG_PATH')    ? null : define('IMG_PATH', SITE_ROOT.DS.TPL_PATH.DS.'ima
 // Define smarty directories
 defined('SMARTY_PATH')  ? null : define('SMARTY_PATH', INC_PATH.DS.'smarty');
 defined('CONFIG_PATH')  ? null : define('CONFIG_PATH', SMARTY_PATH.DS.'configs');
-defined('COMPILE_PATH')	? null : define('COMPILE_PATH', ASSET_PATH.DS.'templates_c');
+defined('COMPILE_PATH') ? null : define('COMPILE_PATH', ASSET_PATH.DS.'templates_c');
 
-// load config file first
+// load config file
 require_once(INC_PATH.DS.'config.php');
 
-// load basic functions 
+// load basic functions
 require_once(INC_PATH.DS.'functions.php');
 
 // load core objects
 require_once(INC_PATH.DS.'session.php');
-/*require_once(LIB_PATH.DS.'database.php');
+
+/*
+require_once(LIB_PATH.DS.'database.php');
 require_once(LIB_PATH.DS.'database_object.php');
 require_once(LIB_PATH.DS.'pagination.php');
 require_once(LIB_PATH.DS."phpMailer".DS."class.phpmailer.php");
@@ -92,20 +71,20 @@ require_once(LIB_PATH.DS."phpMailer".DS."language".DS."phpmailer.lang-en.php");
 // load database-related classes
 require_once(LIB_PATH.DS.'user.php');
 require_once(LIB_PATH.DS.'photograph.php');
-require_once(LIB_PATH.DS.'comment.php');*/
+require_once(LIB_PATH.DS.'comment.php');
+*/
 
-if (!isset ($_SESSION["modified_css"])) 
-{
-        //check if css generator file had change
-        $_SESSION["modified_css"] = filemtime(CSS_PATH.DS."generator.php");
+if (!isset ($_SESSION["modified_css"])) {
+    //check if css generator file had change
+    $_SESSION["modified_css"] = filemtime(CSS_PATH.DS."generator.php");
 } else {
-        $modified_css = $_SESSION["modified_css"];
+    $modified_css = $_SESSION["modified_css"];
 }
+
 require_once (CSS_PATH.DS."generator.php");
 
 // load Smarty engine
 require_once(SMARTY_PATH.DS.'Smarty.class.php');
-
 require_once(INC_PATH.DS.'template.php');
 
 // home links
@@ -122,48 +101,50 @@ $management_service_link    = substr(sha1($config['salt'].'management_service'),
 $online_store_link          = substr(sha1($config['salt'].'online_store'),-24);
 
 // token
-if (isset ($_GET['token'])) 
+if (isset ($_GET['token']))
 {
     switch ($_GET['token']) {
-        case $about_link: 		{ $node = 'about'; }break;
-        case $admissions_link: 		{ $node = 'admissions'; }break;
-        case $faq_link: 		{ $node = 'faq'; }break;
-        case $gallery_link: 		{ $node = 'gallery'; }break;
-        case $alumni_link: 		{ $node = 'alumni'; }break;
-        case $groups_link: 		{ $node = 'groups'; }break;
-        case $record_service_link: 	{ $node = 'record_service'; }break;
-        case $e_centre_link: 		{ $node = 'e_centre'; }break;
-        case $inet_service_link: 	{ $node = 'inet_service'; }break;
+        case $about_link: 		        { $node = 'about'; }break;
+        case $admissions_link: 		    { $node = 'admissions'; }break;
+        case $faq_link: 		        { $node = 'faq'; }break;
+        case $gallery_link: 		    { $node = 'gallery'; }break;
+        case $alumni_link: 		        { $node = 'alumni'; }break;
+        case $groups_link: 		        { $node = 'groups'; }break;
+        case $record_service_link: 	    { $node = 'record_service'; }break;
+        case $e_centre_link: 		    { $node = 'e_centre'; }break;
+        case $inet_service_link: 	    { $node = 'inet_service'; }break;
         case $management_service_link: 	{ $node = 'management_service'; }break;
-        case $online_store_link: 	{ $node = 'online_store'; }break;
+        case $online_store_link: 	    { $node = 'online_store'; }break;
     }
 } else {
-        $_GET['token'] = '';
-        $node = 'home';
+    $_GET['token'] = '';
+    $node = 'home';
 }
-$page_title = ($node == 'about') ? ucwords('about'." ".$config['sch_name_short']) : ucwords(implode(" ", explode("_",$node)));
+$page_title = ($node == 'about')
+    ? ucwords('about'." ".$config['sch_name_short'])
+    : ucwords(implode(" ", explode("_",$node)));
 
 //header assignments
 $template->assign('page_title', 		        $page_title);
-$template->assign('raleway_font_path', 		    FONT_PATH.DS.'raleway'.DS.'raleway.css');
-$template->assign('fontawesome_path', 		    FONT_PATH.DS.'fontawesome'.DS.'css'.DS.'font-awesome.min.css');
-$template->assign('semantic_css_file', 		    CSS_PATH.DS.'semantic.css');
-$template->assign('pure_ui_css_file', 		    CSS_PATH.DS.'pure-ui.css');
+$template->assign('raleway_font_path', 		FONT_PATH.DS.'raleway'.DS.'raleway.css');
+$template->assign('fontawesome_path', 		FONT_PATH.DS.'fontawesome'.DS.'css'.DS.'font-awesome.min.css');
+$template->assign('semantic_css_file', 		CSS_PATH.DS.'semantic.css');
+$template->assign('pure_ui_css_file', 		CSS_PATH.DS.'pure-ui.css');
 $template->assign('pure_side_menu_css_file', 	CSS_PATH.DS.'pure-side-menu.css');
-$template->assign('j_rating_css_file', 		    CSS_PATH.DS.'jRating.jquery.css');
+$template->assign('j_rating_css_file', 		CSS_PATH.DS.'jRating.jquery.css');
 $template->assign('rating_css_file', 		    CSS_PATH.DS.'rating.css');
 $template->assign('css_static_file', 	 	    CSS_PATH.DS.$config['css_static_file']);
 
 // body assignments
-$template->assign('sch_name_long',              ucwords($config['sch_name_long']));
-$template->assign('sch_name_short',             ucfirst($config['sch_name_short']));
-$template->assign('twitter_link',               $config['twitter']);
-$template->assign('google_link',                $config['google']);
-$template->assign('facebook_link',              $config['facebook']);
-$template->assign('assoc_plural',               $config['assoc_plural']);
-$template->assign('sch_status',                 $config['sch_status']);
-$template->assign('sch_status_date',            $config['sch_status_date']);
-$template->assign('recent_additions_source',    IFRAME_PATH.DS.'recent_additions'.DS.'index.php');
+$template->assign('sch_name_long',            ucwords($config['sch_name_long']));
+$template->assign('sch_name_short',           ucfirst($config['sch_name_short']));
+$template->assign('twitter_link',             $config['twitter']);
+$template->assign('google_link',              $config['google']);
+$template->assign('facebook_link',            $config['facebook']);
+$template->assign('assoc_plural',             $config['assoc_plural']);
+$template->assign('sch_status',               $config['sch_status']);
+$template->assign('sch_status_date',          $config['sch_status_date']);
+$template->assign('recent_additions_source',  IFRAME_PATH.DS.'recent_additions'.DS.'index.php');
 
 // anchor href assignments for home.tpl
 $template->assign('home',                   SITE_ROOT);

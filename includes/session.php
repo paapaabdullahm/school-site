@@ -10,11 +10,12 @@ class Session {
 		session_start();
 		$this->check_message();
 		$this->check_login();
-    if($this->logged_in) {
-      // actions to take right away if user is logged in
-    } else {
-      // actions to take right away if user is not logged in
-    }
+
+        if ($this->logged_in) {
+          // actions to take right away if user is logged in
+        } else {
+          // actions to take right away if user is not logged in
+        }
 	}
 	
   public function is_logged_in() {

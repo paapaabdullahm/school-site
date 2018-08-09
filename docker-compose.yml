@@ -1,0 +1,95 @@
+version: '2.4'
+
+services:
+
+  schoolsite_nginx:
+    image: pam79/nginx
+    container_name: schoolsite_nginx
+    working_dir: /usr/share/nginx/html
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    volumes_from:
+      - schoolsite_fastcgi
+    environment:
+      - "VIRTUAL_HOST=dev.schoolsite.com"
+      - "CERT_NAME=*-dev.*"
+    tty: true
+    stdin_open: true
+    depends_on:
+      - schoolsite_fastcgi
+    networks:
+      - dev-frontend
+      - dev-bridge
+    restart: always
+
+  schoolsite_fastcgi:
+    image: pam79/php-fpm
+    container_name: schoolsite_fastcgi
+    working_dir: /usr/share/nginx/html
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./custom.php.ini:/usr/local/etc/php/conf.d/custom.php.ini
+    depends_on:
+      - schoolsite_mariadb
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=schoolsite_mariadb"
+      - "DB_DATABASE=schoolsite"
+      - "DB_USER=schoolsite"
+      - "DB_PASSWORD=secret"
+    networks:
+      - dev-bridge
+      - dev-backend
+    restart: always
+
+  schoolsite_mariadb:
+    image: pam79/mariadb
+    container_name: schoolsite_mariadb
+    volumes:
+      - dbdata-dev:/var/lib/mysql
+      - ./control-user.sh:/docker-entrypoint-initdb.d/control-user.sh
+    environment:
+      - "MYSQL_DATABASE=schoolsite"
+      - "MYSQL_USER=schoolsite"
+      - "MYSQL_PASSWORD=secret"
+      - "MYSQL_ROOT_PASSWORD=rootsecret"
+      - "PMA_SECRET=pmasecret"
+    ports:
+      - "32790:3306"
+    networks:
+      - dev-backend
+    restart: always
+
+  schoolsite_pma:
+    image: pam79/pma
+    container_name: schoolsite_pma
+    volumes:
+      - /sessions
+      - ./config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    environment:
+      - "VIRTUAL_HOST=pma.schoolsite.com"
+      - "DB_HOST=schoolsite_mariadb"
+      - "PMA_SECRET=pmasecret"
+      - "CERT_NAME=*-dev.*"
+    depends_on:
+      - schoolsite_mariadb
+    networks:
+      - dev-frontend
+      - dev-backend
+    restart: always
+
+volumes:
+  dbdata-dev:
+    external:
+      name: schoolsite_maria-data
+
+networks:
+  dev-frontend:
+    external:
+      name: proxy-tier
+  dev-bridge:
+    external:
+      name: app-tier
+  dev-backend:
+    external:
+      name: db-tier
