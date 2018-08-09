@@ -14,8 +14,11 @@ $output = "
 }
 **/
 html,body{
-  padding:0; margin:0;
-  font-family: serif, sans-serif, verdana; font-weight: 400;
+  padding:0; 
+  margin:0;
+  height: 100%;
+  font-family: serif, sans-serif, verdana; 
+  font-weight: 400;
   background-color: {$config['bg_color']};
 }
 a, a:hover, a:active {
@@ -160,9 +163,9 @@ a, a:hover, a:active {
 
 #header {
   text-align: left;
-  min-height:100px; height:100px;
+  min-height:100px; 
+  height:100px;
   /*background-color: none;*/
-  border: 1px solid rgba(0,0,0,0.7);
 }
 .sch-info {
   float: left;
@@ -303,7 +306,7 @@ a, a:hover, a:active {
 *******************************************************
 */		
 #content {
-  min-height:1590px; height:1590px;
+  height: 1733px;
   background-color: #ffffff; 
   -moz-background-clip: padding;     
   -webkit-background-clip: padding;  
@@ -1009,7 +1012,6 @@ input:-ms-input-placeholder {
   float: left;  
   margin: 8px 15px 15px 15px;
   min-width: 749px; width: 907px;
-  border: 1px solid rgba(0,0,0,1);
 }
 #left-floated-bottom-grid { 
   float: left;

@@ -5,9 +5,9 @@ defined('SCHOOL_SITE') ? null : define('SCHOOL_SITE', 10);
 
 // Database Constants
 defined('DB_SERVER') ? null : define("DB_SERVER", getenv('DB_HOST'));
-defined('DB_USER')   ? null : define("DB_USER", getenv('DB_USER'));
-defined('DB_PASS')   ? null : define("DB_PASS", getenv('DB_PASSWORD'));
-defined('DB_NAME')   ? null : define("DB_NAME", getenv('DB_DATABASE'));
+defined('DB_USER')   ? null : define("DB_USER",   getenv('DB_USER'));
+defined('DB_PASS')   ? null : define("DB_PASS",   getenv('DB_PASSWORD'));
+defined('DB_NAME')   ? null : define("DB_NAME",   getenv('DB_DATABASE'));
 
 //Get current working directory
 defined('CWD') ? null : define('CWD', getcwd());

@@ -24,9 +24,8 @@
       <div class='tell-friends'>Tell your friends</div>
     </div>
   </div>
-            
   <div id='content' class='Forground'>
-    <div id='right-menu-segement'> 
+    <div id='right-menu-segement'>
       <div id='search' class="search-bg ui icon input">
         <input placeholder="Search site..." type="text">
         <i class="search icon"></i>
@@ -76,7 +75,7 @@
         <div class="label last-divider">
           Web Store <!--i class="fa fa-shopping-cart"></i-->
         </div></a>
-      </div>	
+      </div>
       <div class="spacer sp-d8"></div>
 
     </div><!--End of right-segement-->
@@ -85,12 +84,12 @@
 
   <div id="primary-content">
     <div class="primary-content-link">
-     
+
     </div>
   </div><!--End of primary-content-->
 
   <div id='secondary-content' class='white-bordered'>
-      
+
       <div class="white-bordered left-floated-column">
           <p class='title'>Parents</p>
           <span class="more overview">
@@ -103,7 +102,7 @@
             <i class="right arrow sign icon"></i> <a href='#'>Other Events</a>
           </span>
       </div>
-      
+
       <div class='vertical-divider'></div>
 
       <div class="white-bordered left-floated-column">
@@ -118,7 +117,7 @@
             <i class="right arrow sign icon"></i> <a href='#'>Weblog</a>
           </span>
       </div>
-      
+
       <div class='vertical-divider'></div>
 
       <div class="white-bordered left-floated-column">
@@ -133,7 +132,7 @@
             <i class="right arrow sign icon"></i> <a href='#'>Weblog</a>
           </span>
       </div>
-      
+
   </div><!--End of secondary-content-->
 
   <div id='recent-additions' class=''>
@@ -141,15 +140,15 @@
       <h3 class=''>Recent Additions Noteworthy</h3>
       <a href='#'><i class='list icon'></i>Show All</a>
     </div>
-    <iframe name="recent-additions-iframe" 
-            id="recent-additions-iframe" 
-            src="{$recent_additions_source}" 
-            frameborder="0" 
+    <iframe name="recent-additions-iframe"
+            id="recent-additions-iframe"
+            src="{$recent_additions_source}"
+            frameborder="0"
             scrolling="no"
-            marginheight="0" 
-            marginwidth="0" 
-            width="650px" 
-            height="94px" 
+            marginheight="0"
+            marginwidth="0"
+            width="650px"
+            height="94px"
             seamless>
     </iframe>
   </div><!--End of recent-additions-->
@@ -194,7 +193,7 @@
           <i class="big sign in icon"></i><br>
           <h2>Admissions</h2>
           <p>
-            Understand Sekondi College&#39;s Mission and Vision and decide if it 
+            Understand Sekondi College&#39;s Mission and Vision and decide if it
             is the right choice for you. Also learn about the CSSPS school selection system.
           </p>
         </a>
@@ -204,9 +203,9 @@
           <i class="big book icon"></i>
           <h2>Academics</h2>
           <p>
-            This section provides info on all departments, and 
-            programmes that are offered in the school. Others 
-            like performance stats, academic calendar, etc are also provided. 
+            This section provides info on all departments, and
+            programmes that are offered in the school. Others
+            like performance stats, academic calendar, etc are also provided.
           </p>
         </a>
       </li>
@@ -215,25 +214,25 @@
           <i class="big dribbble icon"></i>
           <h2>Sports</h2>
           <p>
-            General information on Local, Regional and 
-            National sporting events. Also find 
-            highlights on Athletics, Soccer, Volley 
-            and other sporting events. 
+            General information on Local, Regional and
+            National sporting events. Also find
+            highlights on Athletics, Soccer, Volley
+            and other sporting events.
           </p>
         </a>
       </li>
-      
+
       <!--div class='right square'><div></div></div>
       <div class='left square'><div></div></div-->
-      
+
       <li id='history' class=''>
         <a href='?token={$about}#history'>
           <i class="fa fa-history"></i>
           <h2>History</h2>
           <p>
-            An introduction to the history of 
+            An introduction to the history of
             Sekondi College from the time it started
-            to present, enumerating some of its achievements. 
+            to present, enumerating some of its achievements.
           </p>
         </a>
       </li>
@@ -242,9 +241,9 @@
           <i class="big puzzle piece icon"></i>
           <h2>Counselling</h2>
           <p>
-            This section provides invaluable counselling and 
-            carrear guidance information for current and 
-            prospective students of Sekondi College. 
+            This section provides invaluable counselling and
+            carrear guidance information for current and
+            prospective students of Sekondi College.
           </p>
         </a>
       </li>
@@ -253,9 +252,9 @@
           <i class="big user icon"></i>
           <h2>PTA</h2>
           <p>
-            This section provides information on Sekco PTA and its 
-            activities over the years such as fundraising, housing 
-            projects, meetings and other useful infomation. 
+            This section provides information on Sekco PTA and its
+            activities over the years such as fundraising, housing
+            projects, meetings and other useful infomation.
           </p>
         </a>
       </li>
@@ -306,8 +305,8 @@
       <ul>
         <li>
           <a href='#'>
-            Got&nbsp;suggestions&nbsp;that 
-            can&nbsp;improve&nbsp;us?&nbsp;Just 
+            Got&nbsp;suggestions&nbsp;that
+            can&nbsp;improve&nbsp;us?&nbsp;Just
             send&nbsp;us&nbsp;a&nbsp;Comment.
           </a>
         </li>
@@ -315,9 +314,9 @@
     </div>
   </div>
   </div><!--End of forground content-->
-	
+
   <!-- Record Service Login Modal-->
-	
+
   <div id="record-service-login-modal" class="ui modal record-service-login">
     <div class="header">Record Service Login</div>
     <div class="content">
@@ -362,19 +361,19 @@
       <div class="orange ui button">Cancel</div>
     </div>
   </div>
-	
+
   <!-- Record Service Registration Modal-->
 
   <div id="record-service-registration-modal" class="ui modal record-service-registration">
   <div class="header">Record Service Registration</div>
   <div class="content">
-  <div class="container"> 
+  <div class="container">
     <h1>Kindly fill out and submit the following form ( <i>All fields are required</i> )</h1>
-    <div class="ui form segment" ng-controller="RegisterController"> 
+    <div class="ui form segment" ng-controller="RegisterController">
     <div class="ui inverted dimmer"
          ng-class="{literal}{true: 'active', false: 'disabled'}[loading]{/literal}">
       <div class="ui text loader">
-        Your details are being processed. 
+        Your details are being processed.
         <br /><br />Please wait!
       </div>
     </div>
@@ -387,7 +386,7 @@
     <div id="wrapper" class="field">
     <div class="two fields">
     <div class="field">
-      <label for="Gender">Gender</label> 
+      <label for="Gender">Gender</label>
       <div class="ui fluid selection dropdown">
         <div class="text"><span>Select</span></div>
         <i class="dropdown icon"></i>
@@ -399,7 +398,7 @@
       </div>
     </div>
     <div class="field">
-      <label for="Usertype">User Type</label> 
+      <label for="Usertype">User Type</label>
       <div class="ui fluid selection dropdown">
         <div class="text"><span>Select</span></div>
         <i class="dropdown icon"></i>
@@ -422,7 +421,7 @@
       </div>
       <div class="field">
         <label for="MobileNumber">Mobile Number</label>
-        <input id="MobileNumber" placeholder="Enter a valid Number" type="text" 
+        <input id="MobileNumber" placeholder="Enter a valid Number" type="text"
                ng-model="user.mobilenumber">
       </div>
     </div>
@@ -434,20 +433,20 @@
       </div>
       <div class="field">
         <label for="TrackingId">Tracking ID</label>
-        <input id="TrackingId" placeholder="Enter a valid Student ID" type="text" 
+        <input id="TrackingId" placeholder="Enter a valid Student ID" type="text"
                ng-model="user.trackingid">
       </div>
     </div>
 
     <div class="field">
       <label for="Password">Password</label>
-      <input id="Password" placeholder="Six characters max" type="password" 
+      <input id="Password" placeholder="Six characters max" type="password"
              ng-model="user.password">
     </div>
 
     <div class="field">
       <label for="PasswordConfirm">Password Confirm</label>
-      <input id="PasswordConfirm" placeholder="Confirm" type="password" 
+      <input id="PasswordConfirm" placeholder="Confirm" type="password"
              ng-model="user.passwordconfirm">
     </div>
     <div class="inline field">
@@ -465,10 +464,10 @@
     <div class="orange ui button">Cancel</div>
   </div>
   </div>
-  
+
   {include file='footer.inc.tpl'}
 
-  <script type="text/javascript"> 
+  <script type="text/javascript">
     $('.record-service-login.modal')
       .modal({literal}{detachable:false}{/literal})
       .modal('setting', 'closable', false)
@@ -486,28 +485,28 @@
     $('.ui.checkbox') .checkbox();
 
       (function ($) {
-        $('.ui.form').form({        
+        $('.ui.form').form({
           fullname: {
             identifier: 'FullName',
             rules: [{
               type: 'empty',
               prompt: 'Required'
             }]
-          },       
+          },
           gender: {
             identifier: 'Gender',
             rules: [{
               type: 'empty',
               prompt: 'Required'
             }]
-          }, 
+          },
           usertype: {
             identifier: 'Usertype',
             rules: [{
               type: 'empty',
               prompt: 'Required'
             }]
-          },      
+          },
           email: {
             identifier: 'Email',
             rules: [{
@@ -537,14 +536,14 @@
               type: 'empty',
               prompt: 'Required'
             }]
-          },       
+          },
           trackingid: {
             identifier: 'TrackingId',
             rules: [{
               type: 'empty',
               prompt: 'Required'
             }]
-          },     
+          },
           password: {
             identifier: 'Password',
             rules: [{
@@ -554,7 +553,7 @@
               type: 'length[6]',
               prompt: 'Must be 6 characters long'
             }]
-          },       
+          },
           passwordConfirm: {
             identifier: 'PasswordConfirm',
             rules: [{
@@ -569,14 +568,14 @@
               prompt : 'Must agree to the terms'
             }]
           }
-        }, 
+        },
         {
           on: 'blur',
           inline: 'true'
         });
       }(jQuery));
-    </script>	
-    <script type="text/javascript"> 
+    </script>
+    <script type="text/javascript">
       $(function () {
         $("#recent-additions-iframe").load(function () {
           var ifr = document.getElementById("recent-additions-iframe");
