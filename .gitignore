@@ -1,5 +1,4 @@
 /bootstrap/compiled.php
-/assets/templates_c/*.php
 /vendor
 composer.phar
 .vault_pass
