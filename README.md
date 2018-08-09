@@ -1,4 +1,4 @@
-school-site
+School Site
 ===========
 
-Web Site Development
+An easy demonstration of website development for students at the shs levelEditAdd topics.
